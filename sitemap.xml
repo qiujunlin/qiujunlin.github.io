@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-09-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/books/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
@@ -24,6 +31,27 @@
   
   <url>
     <loc>http://yoursite.com/links/index.html</loc>
+    
+    <lastmod>2020-09-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-09-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2020-09-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/404.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
