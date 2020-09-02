@@ -2,63 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/09/02/my-first-blog/</loc>
+    <loc>http://qiujunlin.github.com/2020/09/02/post-title-with-whitespace/</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/repository/index.html</loc>
+    <loc>http://qiujunlin.github.com/repository/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://qiujunlin.github.com/2020/09/02/my-first-blog/</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/books/index.html</loc>
+    <loc>http://qiujunlin.github.com/tags/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/links/index.html</loc>
+    <loc>http://qiujunlin.github.com/books/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>http://qiujunlin.github.com/links/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://qiujunlin.github.com/categories/index.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/404.html</loc>
+    <loc>http://qiujunlin.github.com/404.html</loc>
     
     <lastmod>2020-09-02</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/09/01/hello-world/</loc>
+    <loc>http://qiujunlin.github.com/2020/09/01/hello-world/</loc>
     
     <lastmod>2020-09-01</lastmod>
     
@@ -66,7 +66,7 @@
   
 
   <url>
-    <loc>http://yoursite.com/</loc>
+    <loc>http://qiujunlin.github.com/</loc>
     <lastmod>2020-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -74,7 +74,7 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/test/</loc>
+    <loc>http://qiujunlin.github.com/tags/test/</loc>
     <lastmod>2020-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -83,7 +83,7 @@
 
   
   <url>
-    <loc>http://yoursite.com/categories/test/</loc>
+    <loc>http://qiujunlin.github.com/categories/test/</loc>
     <lastmod>2020-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
