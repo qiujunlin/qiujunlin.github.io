@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>my-first-blog | Hexo</title>
+  <meta name="description" content="dawn A brand new default theme for [Hexo].  Preview | English documentation | iconfont   特色  多语言 第三方评论框（友言、来必力、gitment、gitalk） 可展示个人豆瓣书单 可展示个人github托管项目 可设置支付宝、微信打赏   主题颜色      页面展示 首页 | 归档 | 分类 | 标签">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-first-blog">
+<meta property="og:url" content="http://yoursite.com/2020/09/02/my-first-blog/index.html">
+<meta property="og:site_name" content="xiaoqiu">
+<meta property="og:description" content="dawn A brand new default theme for [Hexo].  Preview | English documentation | iconfont   特色  多语言 第三方评论框（友言、来必力、gitment、gitalk） 可展示个人豆瓣书单 可展示个人github托管项目 可设置支付宝、微信打赏   主题颜色      页面展示 首页 | 归档 | 分类 | 标签">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn-theme-black.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn-theme-blue.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn-theme-green.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn-theme-purple.png">
+<meta property="article:published_time" content="2020-09-02T10:45:53.000Z">
+<meta property="article:modified_time" content="2020-09-02T10:51:43.634Z">
+<meta property="article:author" content="qiujunlin">
+<meta property="article:tag" content="test">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/02/my-first-blog/doc/images/dawn.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/2020/09/02/my-first-blog/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/qiujunlin" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">qiujunlin</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/qiujunlin" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/test/" style="font-size: 13px;">test</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/test/">test</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/02/my-first-blog/" class="title">my-first-blog</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-02T10:45:53.000Z" itemprop="datePublished">2020-09-02</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/01/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-01T14:36:27.083Z" itemprop="datePublished">2020-09-01</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-my-first-blog" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      my-first-blog
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/09/02/my-first-blog/" class="article-date">
+	  <time datetime="2020-09-02T10:45:53.000Z" itemprop="datePublished">2020-09-02</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/test/" rel="tag">test</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/02/my-first-blog/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="dawn"><a class="markdownIt-Anchor" href="#dawn"></a> dawn</h1>
+<p>A brand new default theme for [<a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>].  <a target="_blank" rel="noopener" href="http://cofess.github.io/">Preview</a> | <a href="README.md">English documentation</a> | <a target="_blank" rel="noopener" href="http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html">iconfont</a></p>
+<p><img src="doc/images/dawn.png" alt="" /></p>
+<h2 id="特色"><a class="markdownIt-Anchor" href="#特色"></a> 特色</h2>
+<ul>
+<li>多语言</li>
+<li>第三方评论框（友言、来必力、gitment、gitalk）</li>
+<li>可展示个人豆瓣书单</li>
+<li>可展示个人github托管项目</li>
+<li>可设置支付宝、微信打赏</li>
+</ul>
+<h2 id="主题颜色"><a class="markdownIt-Anchor" href="#主题颜色"></a> 主题颜色</h2>
+<p><img src="doc/images/dawn-theme-black.png" alt="" /></p>
+<p><img src="doc/images/dawn-theme-blue.png" alt="" /></p>
+<p><img src="doc/images/dawn-theme-green.png" alt="" /></p>
+<p><img src="doc/images/dawn-theme-purple.png" alt="" /></p>
+<h2 id="页面展示"><a class="markdownIt-Anchor" href="#页面展示"></a> 页面展示</h2>
+<p><a target="_blank" rel="noopener" href="http://cofess.github.io/">首页</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/archives/">归档</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/categories/">分类</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/tags/">标签</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/repository/">项目</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/books/">书单</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/links/">友链</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/about/">关于</a></p>
+<h2 id="配置说明"><a class="markdownIt-Anchor" href="#配置说明"></a> 配置说明</h2>
+<p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为站点配置文件， 后者称为主题配置文件</p>
+<h2 id="安装主题"><a class="markdownIt-Anchor" href="#安装主题"></a> 安装主题</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;cofess&#x2F;hexo-theme-pure.git themes&#x2F;dawn</span><br></pre></td></tr></table></figure>
+<h2 id="更新主题"><a class="markdownIt-Anchor" href="#更新主题"></a> 更新主题</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes&#x2F;dawn</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="启用dawn主题"><a class="markdownIt-Anchor" href="#启用dawn主题"></a> 启用dawn主题</h2>
+<p>打开站点配置文件，找到theme字段，将其值更改为 dawn</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: dawn</span><br></pre></td></tr></table></figure>
+<p>到此，主题安装完成。然后启动Hexo服务验证主题是否正确启用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="安装插件"><a class="markdownIt-Anchor" href="#安装插件"></a> 安装插件</h2>
+<h3 id="hexo-wordcount"><a class="markdownIt-Anchor" href="#hexo-wordcount"></a> <a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-json-content"><a class="markdownIt-Anchor" href="#hexo-generator-json-content"></a> <a target="_blank" rel="noopener" href="https://github.com/alexbruno/hexo-generator-json-content">hexo-generator-json-content</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-feed"><a class="markdownIt-Anchor" href="#hexo-generator-feed"></a> <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-sitemap"><a class="markdownIt-Anchor" href="#hexo-generator-sitemap"></a> <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-baidu-sitemap"><a class="markdownIt-Anchor" href="#hexo-generator-baidu-sitemap"></a> <a target="_blank" rel="noopener" href="https://github.com/coneycode/hexo-generator-baidu-sitemap">hexo-generator-baidu-sitemap</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<h2 id="主题配置"><a class="markdownIt-Anchor" href="#主题配置"></a> 主题配置</h2>
+<h3 id="设置语言"><a class="markdownIt-Anchor" href="#设置语言"></a> 设置语言</h3>
+<p>打开站点配置文件, 将 language 设置成你所需要的语言。建议明确设置你所需要的语言,可选值对应themes\dawn\languages目录下语言文件，简体中文配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+<h3 id="主题颜色-2"><a class="markdownIt-Anchor" href="#主题颜色-2"></a> 主题颜色</h3>
+<p>定制了五套颜色，默认白，黑:theme-black，蓝:theme-blue，绿:theme-green，紫:theme-purple</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># config</span><br><span class="line">config:</span><br><span class="line">  skin: # 主题颜色 theme-black theme-blue theme-green theme-purple</span><br></pre></td></tr></table></figure>
+<h3 id="导航菜单"><a class="markdownIt-Anchor" href="#导航菜单"></a> 导航菜单</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 导航菜单</span><br><span class="line">menu:</span><br><span class="line">  Home: . </span><br><span class="line">  Archives: archives # 归档</span><br><span class="line">  Categories: categories # 分类</span><br><span class="line">  Tags: tags # 标签</span><br><span class="line">  Repository: repository # github repositories</span><br><span class="line">  Books: books     # 书单</span><br><span class="line">  Links: links # 友链</span><br><span class="line">  About: about # 关于</span><br><span class="line"></span><br><span class="line"># 导航菜单图标（font awesome）</span><br><span class="line">menu_icons:</span><br><span class="line">  enable: true # 是否启用菜单图标</span><br><span class="line">  home: icon-home-fill</span><br><span class="line">  archives: icon-archives-fill</span><br><span class="line">  categories: icon-folder</span><br><span class="line">  tags: icon-tags</span><br><span class="line">  repository: icon-project</span><br><span class="line">  books: icon-book-fill</span><br><span class="line">  links: icon-friendship</span><br><span class="line">  about: icon-cup-fill</span><br></pre></td></tr></table></figure>
+<h3 id="设置个人信息"><a class="markdownIt-Anchor" href="#设置个人信息"></a> 设置个人信息</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">头像在themes\dawn\source\images 目录下替换图片即可，捐献的二维码同理。</span><br><span class="line"></span><br><span class="line">个人信息大部分都在 主题配置文件 中设置</span><br></pre></td></tr></table></figure>
+<h3 id="搜索"><a class="markdownIt-Anchor" href="#搜索"></a> 搜索</h3>
+<p>主题内置三种站内搜索方式：insight、swiftype、baidu</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">  insight: true # you need to install &#96;hexo-generator-json-content&#96; before using Insight Search</span><br><span class="line">  swiftype: # enter swiftype install key here</span><br><span class="line">  baidu: false # you need to disable other search engines to use Baidu search</span><br></pre></td></tr></table></figure>
+<h3 id="分享"><a class="markdownIt-Anchor" href="#分享"></a> 分享</h3>
+<p>支持<code>weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Share</span><br><span class="line"># weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin</span><br><span class="line">share:</span><br><span class="line">  enable: true  # 是否启用分享</span><br><span class="line">  sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标</span><br><span class="line">  mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标</span><br></pre></td></tr></table></figure>
+<h3 id="评论"><a class="markdownIt-Anchor" href="#评论"></a> 评论</h3>
+<p>主题集成了<a target="_blank" rel="noopener" href="https://disqus.com/">disqus</a>、<a target="_blank" rel="noopener" href="http://www.uyan.cc/">友言</a>、<a target="_blank" rel="noopener" href="https://livere.com/">来必力</a>、<a target="_blank" rel="noopener" href="https://github.com/imsun/gitment">gitment</a>、<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">gitalk</a>评论系统，选择其中一种即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Comment</span><br><span class="line"># Gitment</span><br><span class="line"># Introduction: https:&#x2F;&#x2F;imsun.net&#x2F;posts&#x2F;gitment-introduction&#x2F;</span><br><span class="line">comment:</span><br><span class="line">  type: livere # 启用哪种评论系统</span><br><span class="line">  disqus:  # enter disqus shortname here</span><br><span class="line">  youyan: </span><br><span class="line">    uid: *** # enter youyan uid </span><br><span class="line">  livere:</span><br><span class="line">    uid: *** # enter livere uid</span><br><span class="line">  gitment:</span><br><span class="line">    githubID: username</span><br><span class="line">    repo: username.github.io</span><br><span class="line">    ClientID: ***</span><br><span class="line">    ClientSecret: ***</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure>
+<h3 id="文章浏览量统计"><a class="markdownIt-Anchor" href="#文章浏览量统计"></a> 文章浏览量统计</h3>
+<p>主题内置了不蒜子和leancloud来统计文章浏览量，启用其中之一即可，注意leancloud需要到其官网申请APP ID 和APP Key。</p>
+<p>比如，启用不蒜子来统计文章浏览量，在主题配置文件中把busuanzi设置为true即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pv:</span><br><span class="line">  busuanzi:</span><br><span class="line">    enable: true  # 不蒜子统计</span><br></pre></td></tr></table></figure>
+<p>如果不需要第三方来统计浏览量，只需将相应设置改为false即可（设置为false后不会加载第三方JS脚本）</p>
+<h3 id="github-respostory"><a class="markdownIt-Anchor" href="#github-respostory"></a> Github respostory</h3>
+<p>复制<code>theme/dawn/_source/</code> 目录下<code>repository</code>文件夹到<code>blog path/source/</code> 目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Github</span><br><span class="line">github: </span><br><span class="line">  username: ***  # github username</span><br></pre></td></tr></table></figure>
+<h3 id="豆瓣书单"><a class="markdownIt-Anchor" href="#豆瓣书单"></a> 豆瓣书单</h3>
+<p>复制<code>theme/dawn/_source/</code> 目录下<code>books</code>文件夹到<code>blog path/source/</code> 目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># douban 豆瓣书单</span><br><span class="line">douban:</span><br><span class="line">  user: *** # 豆瓣用户名</span><br><span class="line">  start: 0 # 从哪一条记录开始</span><br><span class="line">  count: 100 # 获取豆瓣书单数据条数</span><br></pre></td></tr></table></figure>
+<h3 id="友情链接"><a class="markdownIt-Anchor" href="#友情链接"></a> 友情链接</h3>
+<p>复制<code>theme/dawn/_source/</code> 目录下<code>links</code>文件夹到<code>blog path/source/</code> 目录下</p>
+<p>在 hexo 目录下的 source 文件夹内创建一个名为 _data（禁止改名）的文件夹。</p>
+<p>然后在文件内创建一个名为 links.yml 的文件,在其中添加相关数据即可。</p>
+<p>单个友情链接的格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name:</span><br><span class="line">    link: http:&#x2F;&#x2F;example.com</span><br><span class="line">    avatar: http:&#x2F;&#x2F;example.com&#x2F;avatar.png</span><br><span class="line">    desc: &quot;这是一个描述&quot;</span><br></pre></td></tr></table></figure>
+<p>添加多个友情链接，我们只需要根据上面的格式重复填写即可。</p>
+<p>. 将 Name 改为友情链接的名字，例如 Cofess。</p>
+<p>. <a target="_blank" rel="noopener" href="http://example.com">http://example.com</a> 为友情链接的地址。</p>
+<p>. <a target="_blank" rel="noopener" href="http://example.com/avatar.png">http://example.com/avatar.png</a> 为友情链接的头像。</p>
+<p>. 这是一个描述 为友情链接描述。</p>
+<h3 id="文章索引目录"><a class="markdownIt-Anchor" href="#文章索引目录"></a> 文章索引目录</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line">  - 文章分类</span><br><span class="line">tags:</span><br><span class="line">  - 文章标签</span><br><span class="line">toc: true # 是否启用内容索引</span><br></pre></td></tr></table></figure>
+<h3 id="sidebar侧边栏"><a class="markdownIt-Anchor" href="#sidebar侧边栏"></a> sidebar侧边栏</h3>
+<p>文章侧边栏默认为开启状态，如果某篇文章不想开启侧边栏，在文章开头配置加入“sidebar: none”即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line">  - 文章分类</span><br><span class="line">tags:</span><br><span class="line">  - 文章标签</span><br><span class="line">sidebar: none # 是否启用sidebar侧边栏，none：不启用</span><br></pre></td></tr></table></figure>
+<h2 id="博客优化"><a class="markdownIt-Anchor" href="#博客优化"></a> 博客优化</h2>
+<h3 id="hexo-neat"><a class="markdownIt-Anchor" href="#hexo-neat"></a> <a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-neat">hexo-neat</a></h3>
+<blockquote>
+<p>auto Minify html、js、css and make it neat</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># hexo-neat</span><br><span class="line">neat_enable: true</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;*.min.css&#39;</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;*.min.js&#39; </span><br></pre></td></tr></table></figure>
+<h3 id="hexo-baidu-url-submit"><a class="markdownIt-Anchor" href="#hexo-baidu-url-submit"></a> <a target="_blank" rel="noopener" href="https://github.com/huiwang/hexo-baidu-url-submit">hexo-baidu-url-submit</a></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-translate-title"><a class="markdownIt-Anchor" href="#hexo-translate-title"></a> <a target="_blank" rel="noopener" href="https://github.com/cometlj/hexo-translate-title">hexo-translate-title</a></h3>
+<blockquote>
+<p>使用Google翻译，百度翻译和有道翻译将Hexo中的汉字标题转成英文标题</p>
+</blockquote>
+<p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-translate-title --save</span><br></pre></td></tr></table></figure>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">translate_title:</span></span><br><span class="line">  <span class="attr">translate_way:</span> <span class="string">google</span>    <span class="comment">#google | baidu | youdao</span></span><br><span class="line">  <span class="attr">youdao_api_key:</span> <span class="string">XXX</span></span><br><span class="line">  <span class="attr">youdao_keyfrom:</span> <span class="string">XXX</span></span><br><span class="line">  <span class="attr">is_need_proxy:</span> <span class="literal">true</span>     <span class="comment">#true | false</span></span><br><span class="line">  <span class="attr">proxy_url:</span> <span class="string">http://localhost:8123</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：判断是否需要配置google本地代理，因为我在本地是开启时才能访问google翻译的，如果没有被墙，请将<code>_config.yml</code> 下的<code>is_need_proxy: true</code>改为false。如果设置为true,请设置本地代理地址</p>
+<h2 id="数学公式"><a class="markdownIt-Anchor" href="#数学公式"></a> 数学公式</h2>
+<blockquote>
+<p>Hexo默认使用&quot;hexo-renderer-marked&quot;引擎渲染网页，该引擎会把一些特殊的markdown符号转换为相应的html标签</p>
+</blockquote>
+<h3 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h3>
+<p>解决方案有很多，可以网上搜下，为了节省大家的时间，这里只提供亲身测试过的方法。</p>
+<p>更换Hexo的markdown渲染引擎，<a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a>引擎替换默认的渲染引擎<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>即可。</p>
+<h3 id="安装hexo-renderer-markdown-it-plus插件"><a class="markdownIt-Anchor" href="#安装hexo-renderer-markdown-it-plus插件"></a> 安装hexo-renderer-markdown-it-plus插件</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
+<p>安装插件后，如果未正常渲染LaTeX数学公式，在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">markdown_it_plus:</span><br><span class="line">  highlight: true</span><br><span class="line">  html: true</span><br><span class="line">  xhtmlOut: true</span><br><span class="line">  breaks: true</span><br><span class="line">  langPrefix:</span><br><span class="line">  linkify: true</span><br><span class="line">  typographer:</span><br><span class="line">  quotes: “”‘’</span><br><span class="line">  plugins:</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-katex</span><br><span class="line">        enable: true</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-mark</span><br><span class="line">        enable: false  </span><br></pre></td></tr></table></figure>
+<h3 id="文章启用mathjax"><a class="markdownIt-Anchor" href="#文章启用mathjax"></a> 文章启用mathjax</h3>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/2020/09/02/my-first-blog/" title="my-first-blog" target="_blank" rel="external">http://yoursite.com/2020/09/02/my-first-blog/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/qiujunlin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/qiujunlin" target="_blank"><span class="text-dark">qiujunlin</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2020/09/01/hello-world/" title="Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/qiujunlin" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'srMpOJp2tacUklpXrI2SdHrB-gzGzoHsz',
+    appKey: 'OsxEOzRQTwsPoyepBzotCirS',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
