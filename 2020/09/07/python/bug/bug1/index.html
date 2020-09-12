@@ -18,13 +18,15 @@
   
   
   <title>Dimension out of range (expected to be in range of [-1, 0], but got 1) | Hexo</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="在Pytorch中，我想通过点乘操作得到S: 12&#x2F;&#x2F;   点乘操作    S&#x3D;a.mm(b) 运行代码时，老是报错: RuntimeError: dimension out of range (expected to be in range of [-1, 0], but got 1) 输出a和b的维度发现： a的形状为 [20 , 5], 但是b的形状为[5 , ]。考虑用pytorch中的v">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Dimension out of range (expected to be in range of [-1, 0], but got 1)">
 <meta property="og:url" content="http://qiujunlin.github.com/2020/09/07/python/bug/bug1/index.html">
 <meta property="og:site_name" content="xiaoqiu">
+<meta property="og:description" content="在Pytorch中，我想通过点乘操作得到S: 12&#x2F;&#x2F;   点乘操作    S&#x3D;a.mm(b) 运行代码时，老是报错: RuntimeError: dimension out of range (expected to be in range of [-1, 0], but got 1) 输出a和b的维度发现： a的形状为 [20 , 5], 但是b的形状为[5 , ]。考虑用pytorch中的v">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-07T15:48:09.000Z">
-<meta property="article:modified_time" content="2020-09-07T16:32:48.304Z">
+<meta property="article:modified_time" content="2020-09-12T09:53:19.501Z">
 <meta property="article:author" content="qiujunlin">
 <meta property="article:tag" content="bug">
 <meta name="twitter:card" content="summary">
@@ -217,7 +219,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/bug/">bug</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -227,7 +229,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -237,7 +239,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/bug/" style="font-size: 13px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a>
+      <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a>
     </div>
   </div>
 
@@ -246,7 +248,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -262,7 +264,22 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/python/">python</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/python/bug/">bug</a>
+                <a class="category-link" href="/categories/bug/">bug</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/12/python/bug/'Tensor'%20object%20is%20not%20callable/" class="title">TypeError： &#39;Tensor&#39; object is not callable</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-12T09:34:58.000Z" itemprop="datePublished">2020-09-12</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/bug/">bug</a>
               </p>
               <p class="item-title">
                 <a href="/2020/09/07/python/bug/bug1/" class="title">Dimension out of range (expected to be in range of [-1, 0], but got 1)</a>
@@ -338,7 +355,7 @@
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/bug/">bug</a>
+    <a class="article-category-link" href="/categories/bug/">bug</a>
   </span>
 
         
@@ -360,7 +377,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/07/python/bug/bug1/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 251(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -370,7 +387,14 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>在Pytorch中，我想通过点乘操作得到S:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//   点乘操作</span><br><span class="line">    S=a.mm(b)</span><br></pre></td></tr></table></figure>
+<p>运行代码时，老是报错:<br />
+<u>RuntimeError: dimension out of range (expected to be in range of [-1, 0], but got 1)</u></p>
+<p>输出a和b的维度发现： a的形状为 [20 , 5], 但是b的形状为[5 , ]。考虑用pytorch中的view函数，改变b的形状为[5,1]：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的形状为[<span class="number">5</span>,]:   tensor([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line">//  view后b的形状为[<span class="number">5</span>,<span class="number">1</span>]: tensor([ [<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>], [<span class="number">4</span>], [<span class="number">5</span>]], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    b=b.view(len(b),<span class="number">1</span>)</span><br><span class="line">    S=a.mm(b)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>从numpy.array( )的数组中，取某一行的数据转换成pytorch变量时，容易出现这个问题。类似地，也可以提前考虑用numpy.reshape( )改变所取的那一行数据，再转换成pytorch变量，再进行点乘运算。代码如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的格式为:  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">// reshape后b的格式为: [ [<span class="number">1.</span>] [<span class="number">2.</span>] [<span class="number">3.</span>] [<span class="number">4.</span>] [<span class="number">5.</span>] ]</span><br><span class="line"></span><br><span class="line">   b = numpy.reshape(b,(len(b),<span class="number">1</span>))</span><br><span class="line">   b = Variable(</span><br><span class="line">         torch.from_numpy(b).type(T.FloatTensor))</span><br><span class="line">   S=a.mm(b)</span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -424,6 +448,10 @@
   <div class="bar-inner">
   
   <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/09/12/python/bug/'Tensor'%20object%20is%20not%20callable/" title="TypeError： &#39;Tensor&#39; object is not callable"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
     
     
     <li class="next">

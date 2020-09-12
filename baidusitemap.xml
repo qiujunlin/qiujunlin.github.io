@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
-    <lastmod>2020-09-07</lastmod>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/12/python/bug/'Tensor'%20object%20is%20not%20callable/</loc>
+    <lastmod>2020-09-12</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/02/my-first-blog/</loc>

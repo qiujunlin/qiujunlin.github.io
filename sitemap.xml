@@ -4,7 +4,14 @@
   <url>
     <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
     
-    <lastmod>2020-09-07</lastmod>
+    <lastmod>2020-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/12/python/bug/'Tensor'%20object%20is%20not%20callable/</loc>
+    
+    <lastmod>2020-09-12</lastmod>
     
   </url>
   
@@ -97,14 +104,7 @@
   </url>
   
   <url>
-    <loc>http://qiujunlin.github.com/categories/python/</loc>
-    <lastmod>2020-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qiujunlin.github.com/categories/python/bug/</loc>
+    <loc>http://qiujunlin.github.com/categories/bug/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
