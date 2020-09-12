@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/02/post-title-with-whitespace/</loc>
+    <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
     
-    <lastmod>2020-09-02</lastmod>
+    <lastmod>2020-09-07</lastmod>
     
   </url>
   
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://qiujunlin.github.com/</loc>
-    <lastmod>2020-09-02</lastmod>
+    <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,7 +75,14 @@
   
   <url>
     <loc>http://qiujunlin.github.com/tags/test/</loc>
-    <lastmod>2020-09-02</lastmod>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/bug/</loc>
+    <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,7 +91,21 @@
   
   <url>
     <loc>http://qiujunlin.github.com/categories/test/</loc>
-    <lastmod>2020-09-02</lastmod>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/categories/python/</loc>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/categories/python/bug/</loc>
+    <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

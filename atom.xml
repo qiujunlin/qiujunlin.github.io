@@ -6,7 +6,7 @@
   <link href="http://qiujunlin.github.com/atom.xml" rel="self"/>
   
   <link href="http://qiujunlin.github.com/"/>
-  <updated>2020-09-02T12:20:26.523Z</updated>
+  <updated>2020-09-07T16:32:48.304Z</updated>
   <id>http://qiujunlin.github.com/</id>
   
   <author>
@@ -17,15 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>post title with whitespace</title>
-    <link href="http://qiujunlin.github.com/2020/09/02/post-title-with-whitespace/"/>
-    <id>http://qiujunlin.github.com/2020/09/02/post-title-with-whitespace/</id>
-    <published>2020-09-02T12:20:26.000Z</published>
-    <updated>2020-09-02T12:20:26.523Z</updated>
+    <title>Dimension out of range (expected to be in range of [-1, 0], but got 1)</title>
+    <link href="http://qiujunlin.github.com/2020/09/07/python/bug/bug1/"/>
+    <id>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</id>
+    <published>2020-09-07T15:48:09.000Z</published>
+    <updated>2020-09-07T16:32:48.304Z</updated>
     
     
     
     
+    <category term="python" scheme="http://qiujunlin.github.com/categories/python/"/>
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/categories/python/bug/"/>
+    
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/tags/bug/"/>
     
   </entry>
   
