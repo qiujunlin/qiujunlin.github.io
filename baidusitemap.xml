@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
+    <lastmod>2020-09-13</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/CNN/</loc>
+    <lastmod>2020-09-13</lastmod>
+  </url>
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>

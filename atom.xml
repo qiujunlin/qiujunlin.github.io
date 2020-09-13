@@ -6,7 +6,7 @@
   <link href="http://qiujunlin.github.com/atom.xml" rel="self"/>
   
   <link href="http://qiujunlin.github.com/"/>
-  <updated>2020-09-12T09:47:39.672Z</updated>
+  <updated>2020-09-13T08:24:22.790Z</updated>
   <id>http://qiujunlin.github.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>page</title>
+    <link href="http://qiujunlin.github.com/2020/09/13/paper/CNN/"/>
+    <id>http://qiujunlin.github.com/2020/09/13/paper/CNN/</id>
+    <published>2020-09-13T08:06:29.000Z</published>
+    <updated>2020-09-13T08:24:22.790Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/.com//1.jpg" alt="1"></p><p><img src="/.com//E:%5Cblog%5Cmyblog%5Csource%5Cimages%5C1.jpg" alt></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.com//1.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.com//E:%5Cblog%5Cmyblog%5Csource%5Cimages%5C1.jpg&quot; alt&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>R-CNN 论文解析</title>
+    <link href="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/"/>
+    <id>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</id>
+    <published>2020-09-13T06:52:08.000Z</published>
+    <updated>2020-09-13T08:33:28.228Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"><a class="markdownIt-Anchor" href="#论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"></a> 论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation</h6><h2 id="rcnn算法步骤"><a class="markdownIt-Anchor" href="#rcnn算法步骤"></a> Rcnn算法步骤</h2><p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p><p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p><p><img src="/images/1.jpg" alt></p><h2 id="rcnn训练过程"><a class="markdownIt-Anchor" href="#rcnn训练过程"></a> Rcnn训练过程</h2><h2 id="rcnn-的优劣"><a class="markdownIt-Anchor" href="#rcnn-的优劣"></a> Rcnn 的优劣</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h6 id=&quot;论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#论文标题rich-f</summary>
+      
+    
+    
+    
+    
+    <category term="R-CNN" scheme="http://qiujunlin.github.com/tags/R-CNN/"/>
+    
+    <category term="论文" scheme="http://qiujunlin.github.com/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>TypeError： &#39;Tensor&#39; object is not callable</title>

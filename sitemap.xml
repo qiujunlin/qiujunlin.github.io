@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
+    
+    <lastmod>2020-09-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/CNN/</loc>
+    
+    <lastmod>2020-09-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
     
     <lastmod>2020-09-12</lastmod>
@@ -74,7 +88,7 @@
 
   <url>
     <loc>http://qiujunlin.github.com/</loc>
-    <lastmod>2020-09-12</lastmod>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,14 +96,28 @@
   
   <url>
     <loc>http://qiujunlin.github.com/tags/test/</loc>
-    <lastmod>2020-09-12</lastmod>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/bug/</loc>
-    <lastmod>2020-09-12</lastmod>
+    <lastmod>2020-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/R-CNN/</loc>
+    <lastmod>2020-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,14 +126,14 @@
   
   <url>
     <loc>http://qiujunlin.github.com/categories/test/</loc>
-    <lastmod>2020-09-12</lastmod>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/bug/</loc>
-    <lastmod>2020-09-12</lastmod>
+    <lastmod>2020-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
