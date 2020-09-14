@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
+    <loc>http://qiujunlin.github.com/2020/08/13/thems/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
     
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/13/paper/CNN/</loc>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
     
     <lastmod>2020-09-13</lastmod>
     
@@ -88,7 +88,7 @@
 
   <url>
     <loc>http://qiujunlin.github.com/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,28 +96,35 @@
   
   <url>
     <loc>http://qiujunlin.github.com/tags/test/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/bug/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/R-CNN/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/thems/</loc>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,14 +133,21 @@
   
   <url>
     <loc>http://qiujunlin.github.com/categories/test/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/bug/</loc>
-    <lastmod>2020-09-13</lastmod>
+    <lastmod>2020-09-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/categories/thems/</loc>
+    <lastmod>2020-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

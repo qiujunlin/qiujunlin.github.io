@@ -18,18 +18,18 @@
   
   
   <title>R-CNN 论文解析 | Hexo</title>
-  <meta name="description" content="论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation  Rcnn算法步骤     Rcnn训练过程  Rcnn 的优劣">
+  <meta name="description" content="论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation  Rcnn算法步骤 论文中的算法分为了两个部分，分别是预测和训练，预测算法如下   生成候选区。给出一张待识别的图片，生成2000个候选区，采用的方法是selective search‘ 提取特征。将2000个候选区输入一个C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R-CNN 论文解析">
 <meta property="og:url" content="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/index.html">
 <meta property="og:site_name" content="xiaoqiu">
-<meta property="og:description" content="论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation  Rcnn算法步骤     Rcnn训练过程  Rcnn 的优劣">
+<meta property="og:description" content="论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation  Rcnn算法步骤 论文中的算法分为了两个部分，分别是预测和训练，预测算法如下   生成候选区。给出一张待识别的图片，生成2000个候选区，采用的方法是selective search‘ 提取特征。将2000个候选区输入一个C">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/1.jpg">
-<meta property="og:image" content="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/1.jpg">
-<meta property="og:image" content="http://qiujunlin.github.com/images/1.jpg">
+<meta property="og:image" content="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/2.png">
+<meta property="og:image" content="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/3.png">
 <meta property="article:published_time" content="2020-09-13T06:52:08.000Z">
-<meta property="article:modified_time" content="2020-09-13T08:33:28.228Z">
+<meta property="article:modified_time" content="2020-09-13T15:45:04.479Z">
 <meta property="article:author" content="qiujunlin">
 <meta property="article:tag" content="R-CNN">
 <meta property="article:tag" content="论文">
@@ -224,7 +224,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -234,7 +234,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -244,7 +244,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
+      <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
     </div>
   </div>
 
@@ -253,7 +253,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -265,21 +265,6 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2020/09/13/paper/CNN/" class="title">page</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-09-13T08:06:29.000Z" itemprop="datePublished">2020-09-13</time>
-              </p>
-            </div>
-          </li>
-          
           <li>
             
             <div class="item-inner">
@@ -340,6 +325,21 @@
             </div>
           </li>
           
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/01/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-01T14:36:27.083Z" itemprop="datePublished">2020-09-01</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
@@ -392,10 +392,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/13/paper/R-CNN/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 28(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.2k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
 	
 
       </div>
@@ -404,10 +404,40 @@
       
         <h6 id="论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"><a class="markdownIt-Anchor" href="#论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"></a> 论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation</h6>
 <h2 id="rcnn算法步骤"><a class="markdownIt-Anchor" href="#rcnn算法步骤"></a> Rcnn算法步骤</h2>
+<p>论文中的算法分为了两个部分，分别是预测和训练，预测算法如下</p>
 <p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p>
-<p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p>
-<p><img src="/images/1.jpg" alt></p>
-<h2 id="rcnn训练过程"><a class="markdownIt-Anchor" href="#rcnn训练过程"></a> Rcnn训练过程</h2>
+<ol>
+<li>生成候选区。给出一张待识别的图片，生成2000个候选区，采用的方法是selective search‘</li>
+<li>提取特征。将2000个候选区输入一个CNN网络，输出每个候选区的特征（一维张量）</li>
+<li>判断类别。将CNN输出的特征矩阵作为SVM分类器的输出，输出的结果是每个候选区的分类结果（分数）</li>
+<li>修正位置。使用边框回归的办法修正。</li>
+</ol>
+<p>详细解释，（对论文中每个步骤的归纳）</p>
+<h5 id="1生成候选区"><a class="markdownIt-Anchor" href="#1生成候选区"></a> 1.生成候选区</h5>
+<p>候选区的生成使用了selective search（很多方法中的一种）方法，产生了2000个候选框，由于每个候选框的大小和长宽比例都不一样，而输入CNN网络的时候，所有的候选框都必须要统一尺寸227x227，于是需要将所有候选框进行warp（扭曲）</p>
+<p>论文中<strong>Object proposal transformation介绍了三种缩放的方法</strong></p>
+<p><img src="/2020/09/13/paper/R-CNN/2.png" alt="2"></p>
+<ol>
+<li>tightest square with context   将region proposal在原始图像上进行扩展，扩展成正方形，扩展的部分使用原始图像来填补，如果遇到了边界，则使用bounding box中的颜色均值填充。然后将其缩放至227X227。如B</li>
+<li>tightest square without context 和上面一种方法类似，只不过扩充的部分全部使用BBOX的颜色均值。如C</li>
+<li>warp 直接将图像缩放至227X227，不使用填充，相当于压缩拉伸。如D</li>
+</ol>
+<p>同时，论文中也提出了一种对上面的方法添加的方法，使用padding=16来处理，提升了3-5 mAP points。</p>
+<h5 id="2提取特征"><a class="markdownIt-Anchor" href="#2提取特征"></a> 2.提取特征</h5>
+<h6 id="1cnn网络结构"><a class="markdownIt-Anchor" href="#1cnn网络结构"></a> 1.CNN网络结构</h6>
+<p>​    论文中的网络结构选用的是AlexNet网络，文中还提出了VGG16网络，分析了两种网络的效率。发现使用Vgg16得出的结果精度更高些，分别是58%和66%，但是使用VGG16要比AlexNet要多花7倍的时间。</p>
+<p>​	下面是AlexNet网络的结构</p>
+<p><img src="/2020/09/13/paper/R-CNN/3.png" alt="3"></p>
+<p>​    alexnet包含了8层，其中5层是卷积层，3层是全连接层。其中卷积层和前两个全连接层是特征提取层，最后一层是分类层。其中第五层输出6x6x256=9012个神经元，f6,f7输出4096个单元。</p>
+<h6 id="2training-训练"><a class="markdownIt-Anchor" href="#2training-训练"></a> 2.training 训练</h6>
+<p>1.Supervised pre-training 有监督的预训练</p>
+<p>​     论文中采用的网络的结构，直接使用Alexnet网络结构，并且所有的参数也直接照搬过来（已经在数据集上训练好的）。这里使用的训练数据集为ImageNet 数据集，其中包含1000个类别，ImageNet数据只有分类，没有位置标注。使用这个数据集的目的是使这个网络结构具有提取图片特征的能力。</p>
+<p>2.Domain-specifific fifine-tuning 特定样本下的微调</p>
+<p>​      ①数据准备 训练的输入数据来自PASCAL VOC 数据集（包含20个类别，该数据集既有类别标签，又有物体的位置标签）。将在图片上选出的2000个候选框进行标注，region proposal与ground truth 的IOU大于0.5 标注为正样本，小于0,5 标注为负样本。</p>
+<p>​       ②网络结构调整 保持网络结构不变，将网络的最后一层也就是第八层替换掉，替换成N+1个输出神经元，其中N标类别个数，1表示背景。这层的参数采用随机初始化，其其它层的参数保持不变，</p>
+<p>​     ③ 微调 。每次将33个正样本和96个负样本输入到网络中，对网络进行分类训练，这里使用的学习率为0.001，为预训练学习率的十分之一，目的是为了减少对之前学学习参数的改变。</p>
+<p>​      训练一共分为了预训练和微调训练。理解应该是预训练是卷积层具有了很强的特征提取能力。全连接层的作用是针对某些特定场景下的分类。比如说人的年龄识别。卷积层提权到的是所有人脸的共性特征。全连接层在针对这些特征进行一个 年龄的分类，也就是学习的是年龄的特征。如果换做性别的识别，那摸卷积层提取到的是共性特征，全连接层再对性别进行分类也就是学习的性别特征。微调的作用就是针对不同的业务场景对模型参数进行二次训练，而不用对原来的模型参数进行大幅度的改变。</p>
+<h2 id="rcnn训练程"><a class="markdownIt-Anchor" href="#rcnn训练程"></a> Rcnn训练程</h2>
 <h2 id="rcnn-的优劣"><a class="markdownIt-Anchor" href="#rcnn-的优劣"></a> Rcnn 的优劣</h2>
 
       
@@ -463,10 +493,6 @@
   <div class="bar-inner">
   
   <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2020/09/13/paper/CNN/" title="page"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
     
     <li class="next">
