@@ -6,7 +6,7 @@
   <link href="http://qiujunlin.github.com/atom.xml" rel="self"/>
   
   <link href="http://qiujunlin.github.com/"/>
-  <updated>2020-09-13T15:45:04.479Z</updated>
+  <updated>2020-09-15T10:55:56.782Z</updated>
   <id>http://qiujunlin.github.com/</id>
   
   <author>
@@ -17,21 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AlexNet 论文解析</title>
+    <link href="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/"/>
+    <id>http://qiujunlin.github.com/2020/09/15/paper/Alexnet/</id>
+    <published>2020-09-15T10:55:10.000Z</published>
+    <updated>2020-09-15T10:55:56.782Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>R-CNN 论文解析</title>
     <link href="http://qiujunlin.github.com/2020/09/13/paper/R-CNN/"/>
     <id>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</id>
     <published>2020-09-13T06:52:08.000Z</published>
-    <updated>2020-09-13T15:45:04.479Z</updated>
+    <updated>2020-09-15T13:48:26.270Z</updated>
     
-    <content type="html"><![CDATA[<h6 id="论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"><a class="markdownIt-Anchor" href="#论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation"></a> 论文标题：Rich feature hierarchies for accurate object detection and semantic segmentation</h6><h2 id="rcnn算法步骤"><a class="markdownIt-Anchor" href="#rcnn算法步骤"></a> Rcnn算法步骤</h2><p>论文中的算法分为了两个部分，分别是预测和训练，预测算法如下</p><p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p><ol><li>生成候选区。给出一张待识别的图片，生成2000个候选区，采用的方法是selective search‘</li><li>提取特征。将2000个候选区输入一个CNN网络，输出每个候选区的特征（一维张量）</li><li>判断类别。将CNN输出的特征矩阵作为SVM分类器的输出，输出的结果是每个候选区的分类结果（分数）</li><li>修正位置。使用边框回归的办法修正。</li></ol><p>详细解释，（对论文中每个步骤的归纳）</p><h5 id="1生成候选区"><a class="markdownIt-Anchor" href="#1生成候选区"></a> 1.生成候选区</h5><p>候选区的生成使用了selective search（很多方法中的一种）方法，产生了2000个候选框，由于每个候选框的大小和长宽比例都不一样，而输入CNN网络的时候，所有的候选框都必须要统一尺寸227x227，于是需要将所有候选框进行warp（扭曲）</p><p>论文中<strong>Object proposal transformation介绍了三种缩放的方法</strong></p><p><img src="/2020/09/13/paper/R-CNN/2.png" alt="2"></p><ol><li>tightest square with context   将region proposal在原始图像上进行扩展，扩展成正方形，扩展的部分使用原始图像来填补，如果遇到了边界，则使用bounding box中的颜色均值填充。然后将其缩放至227X227。如B</li><li>tightest square without context 和上面一种方法类似，只不过扩充的部分全部使用BBOX的颜色均值。如C</li><li>warp 直接将图像缩放至227X227，不使用填充，相当于压缩拉伸。如D</li></ol><p>同时，论文中也提出了一种对上面的方法添加的方法，使用padding=16来处理，提升了3-5 mAP points。</p><h5 id="2提取特征"><a class="markdownIt-Anchor" href="#2提取特征"></a> 2.提取特征</h5><h6 id="1cnn网络结构"><a class="markdownIt-Anchor" href="#1cnn网络结构"></a> 1.CNN网络结构</h6><p>​    论文中的网络结构选用的是AlexNet网络，文中还提出了VGG16网络，分析了两种网络的效率。发现使用Vgg16得出的结果精度更高些，分别是58%和66%，但是使用VGG16要比AlexNet要多花7倍的时间。</p><p>​下面是AlexNet网络的结构</p><p><img src="/2020/09/13/paper/R-CNN/3.png" alt="3"></p><p>​    alexnet包含了8层，其中5层是卷积层，3层是全连接层。其中卷积层和前两个全连接层是特征提取层，最后一层是分类层。其中第五层输出6x6x256=9012个神经元，f6,f7输出4096个单元。</p><h6 id="2training-训练"><a class="markdownIt-Anchor" href="#2training-训练"></a> 2.training 训练</h6><p>1.Supervised pre-training 有监督的预训练</p><p>​     论文中采用的网络的结构，直接使用Alexnet网络结构，并且所有的参数也直接照搬过来（已经在数据集上训练好的）。这里使用的训练数据集为ImageNet 数据集，其中包含1000个类别，ImageNet数据只有分类，没有位置标注。使用这个数据集的目的是使这个网络结构具有提取图片特征的能力。</p><p>2.Domain-specifific fifine-tuning 特定样本下的微调</p><p>​      ①数据准备 训练的输入数据来自PASCAL VOC 数据集（包含20个类别，该数据集既有类别标签，又有物体的位置标签）。将在图片上选出的2000个候选框进行标注，region proposal与ground truth 的IOU大于0.5 标注为正样本，小于0,5 标注为负样本。</p><p>​       ②网络结构调整 保持网络结构不变，将网络的最后一层也就是第八层替换掉，替换成N+1个输出神经元，其中N标类别个数，1表示背景。这层的参数采用随机初始化，其其它层的参数保持不变，</p><p>​     ③ 微调 。每次将33个正样本和96个负样本输入到网络中，对网络进行分类训练，这里使用的学习率为0.001，为预训练学习率的十分之一，目的是为了减少对之前学学习参数的改变。</p><p>​      训练一共分为了预训练和微调训练。理解应该是预训练是卷积层具有了很强的特征提取能力。全连接层的作用是针对某些特定场景下的分类。比如说人的年龄识别。卷积层提权到的是所有人脸的共性特征。全连接层在针对这些特征进行一个 年龄的分类，也就是学习的是年龄的特征。如果换做性别的识别，那摸卷积层提取到的是共性特征，全连接层再对性别进行分类也就是学习的性别特征。微调的作用就是针对不同的业务场景对模型参数进行二次训练，而不用对原来的模型参数进行大幅度的改变。</p><h2 id="rcnn训练程"><a class="markdownIt-Anchor" href="#rcnn训练程"></a> Rcnn训练程</h2><h2 id="rcnn-的优劣"><a class="markdownIt-Anchor" href="#rcnn-的优劣"></a> Rcnn 的优劣</h2>]]></content>
+    <content type="html"><![CDATA[<p>[TOC]</p><h2 id="论文简介"><a class="markdownIt-Anchor" href="#论文简介"></a> 论文简介</h2><table><thead><tr><th style="text-align:left">论文标题         </th><th>Rich feature hierarchies for accurate object detection and semantic   segmentation（针对高准确度的目标检测与语义分割的多特征层级</th></tr></thead><tbody><tr><td style="text-align:left">作者</td><td>Ross Girshick Jeff Donahue Trevor Darrell Jitendra Malik</td></tr><tr><td style="text-align:left">发布时间</td><td></td></tr><tr><td style="text-align:left"></td><td></td></tr></tbody></table><h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要：</h2><p>​    提出了一种新的算法，算法比之前最好的结果提升了百分之30的Map，有两个重要的创新点：</p><ol><li><p><strong>将大型的卷积神经网络应用于自下而上的候选区-&gt;用来定位和分割物体</strong></p></li><li><p><strong>由于训练数据缺乏，采用预训练和调优的方式，显著的提升了检测结果</strong></p></li></ol><h2 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍：</h2><p>​       2012年 CNN在ILSVRC 上取得了出色的表现，引起了很多人对神经网络在目标检测上的兴趣，一个核心问题被提出来：ImageNet上的CNN分类结果在何种程度上能够应用到PASCAL VOC挑战的物体检测任务上？</p><p>​      本论文回答了这个问题，将imagenet的识别能力泛化到PASCAL VOC检测任务上，但是这首先要解决两个问提，分别是：</p><p><strong>1.如何使用神经网络定位物体？</strong></p><p><strong>2.如何在小量的数据上训练一个高性能的模型？</strong></p><p>论文中解决了上述的两个问题。</p><h2 id="rcnn算法步骤"><a class="markdownIt-Anchor" href="#rcnn算法步骤"></a> Rcnn算法步骤</h2><p>论文中的算法分为了两个部分，分别是预测和训，预测算法如下</p><p><img src="/2020/09/13/paper/R-CNN/1.jpg" alt="1"></p><ol><li>生成候选区。给出一张待识别的图片，生成2000个候选区，采用的方法是selective search‘</li><li>提取特征。将2000个候选区输入一个CNN网络，输出每个候选区的特征（一维张量）</li><li>判断类别。将CNN输出的特征矩阵作为SVM分类器的输出，输出的结果是每个候选区的分类结果（分数）</li><li>修正位置。使用边框回归的办法修正。</li></ol><h2 id="详细解释对论文中每个步骤的归纳"><a class="markdownIt-Anchor" href="#详细解释对论文中每个步骤的归纳"></a> 详细解释（对论文中每个步骤的归纳）</h2><h3 id="1生成候选区"><a class="markdownIt-Anchor" href="#1生成候选区"></a> 1.生成候选区</h3><p>​       候选区的生成使用了selective search（很多方法中的一种）方法，产生了2000个候选框，由于每个候选框的大小和长宽比例都不一样，而输入CNN网络的时候，所有的候选框都必须要统一尺寸227x227，于是需要将所有候选框进行warp（扭曲）</p><p>论文中<strong>Object proposal transformation介绍了三种缩放的方法</strong></p><p><img src="/2020/09/13/paper/R-CNN/2.png" alt="2"></p><ol><li>tightest square with context   将region proposal在原始图像上进行扩展，扩展成正方形，扩展的部分使用原始图像来填补，如果遇到了边界，则使用bounding box中的颜色均值填充。然后将其缩放至227X227。如B</li><li>tightest square without context 和上面一种方法类似，只不过扩充的部分全部使用BBOX的颜色均值。如C</li><li>warp 直接将图像缩放至227X227，不使用填充，相当于压缩拉伸。如D</li></ol><p>同时，论文中也提出了一种对上面的方法添加的方法，使用padding=16来处理，提升了3-5 mAP points。</p><h3 id="2提取特征"><a class="markdownIt-Anchor" href="#2提取特征"></a> 2.提取特征</h3><h4 id="1cnn网络结构"><a class="markdownIt-Anchor" href="#1cnn网络结构"></a> 1.CNN网络结构</h4><p>​      论文中的网络结构选用的是AlexNet网络，文中还提出了VGG16网络，分析了两种网络的效率。发现使用Vgg16得 出的结果精度更高些，分别是58%和66%，但是使用VGG16要比AlexNet要多花7倍的时间。</p><p>​下面是AlexNet网络的结构</p><p><img src="/2020/09/13/paper/R-CNN/5.png" alt="5"></p><p>​      alexnet包含了8层，其中5层是卷积层，3层是全连接层。其中卷积层和前两个全连接层是特征提取层，最后一层是分类层。其中第五层输出6x6x256=9012个神经元，f6,f7输出4096个单元。</p><h4 id="2training-网络训练"><a class="markdownIt-Anchor" href="#2training-网络训练"></a> 2.training 网络训练</h4><h5 id="1supervised-pre-training-有监督的预训练"><a class="markdownIt-Anchor" href="#1supervised-pre-training-有监督的预训练"></a> 1.Supervised pre-training 有监督的预训练</h5><p>​       论文中采用的网络的结构，直接使用Alexnet网络结构，并且所有的参数也直接照搬过来（已经在数据集上训练好的）。这里使用的训练数据集为ImageNet 数据集，其中包含1000个类别，ImageNet数据只有分类，没有位置标注。使用这个数据集的目的是使这个网络结构具有提取图片特征的能力。</p><h5 id="2domain-specifific-fifine-tuning-特定样本下的微调"><a class="markdownIt-Anchor" href="#2domain-specifific-fifine-tuning-特定样本下的微调"></a> 2.Domain-specifific fifine-tuning 特定样本下的微调</h5><p>​      ①数据准备 训练的输入数据来自PASCAL VOC 数据集（包含20个类别，该数据集既有类别标签，又有物体的位置标签）。将在图片上选出的2000个候选框进行标注，region proposal与ground truth 的IOU大于0.5 标注为正样本，小于0,5 标注为负样本。</p><p>​       ②网络结构调整 保持网络结构不变，将网络的最后一层也就是第八层替换掉，替换成N+1个输出神经元，其中N标类别个数，1表示背景。这层的参数采用随机初始化，其其它层的参数保持不变，</p><p>​     ③ 微调 。每次将33个正样本和96个负样本输入到网络中，对网络进行分类训练，这里使用的学习率为0.001，为预训练学习率的十分之一，目的是为了减少对之前学学习参数的改变。</p><p>​      训练一共分为了预训练和微调训练。理解应该是预训练是卷积层具有了很强的特征提取能力。全连接层的作用是针对某些特定场景下的分类。比如说人的年龄识别。卷积层提权到的是所有人脸的共性特征。全连接层在针对这些特征进行一个 年龄的分类，也就是学习的是年龄的特征。如果换做性别的识别，那摸卷积层提取到的是共性特征，全连接层再对性别进行分类也就是学习的性别特征。微调的作用就是针对不同的业务场景对模型参数进行二次训练，而不用对原来的模型参数进行大幅度的改变。</p><h3 id="3svm训练"><a class="markdownIt-Anchor" href="#3svm训练"></a> 3.Svm训练</h3><h5 id="1-训练"><a class="markdownIt-Anchor" href="#1-训练"></a> 1 训练</h5><p>​      数据样本。训练SVM分类的的数据来源也为PASCAL VOC ，但是正负样本的定义不同，正样本你的定义为ground  true  ，直接将标注的选框截取出来，输入到CNN网络中提取特征，作为训练SVM的输入。负样本的定义为：2000个候选框中与ground true 的IOU小于0.3 的定义为负样本。</p><p>​     SVM 结构。svm的结构相当于一个全连接层，需要为每一个类别训练一个线性SVM.最后训练之后就得到了一个SVM分类器。里面的权值已经训练完成。结构如下图</p><p><img src="/2020/09/13/paper/R-CNN/4.png" alt="4"></p><h5 id="2-测试"><a class="markdownIt-Anchor" href="#2-测试"></a> 2. 测试</h5><p>​     测试的时候，选取的输入为CNN f7层的输出，不是f8层的输出。将输出结果输入到SVM分类器。f7输出为2000X4096，也是SVM分类器的输入。svm输出为2000X20的矩阵。其中每一行表示某个边框在每个分类下的分数。</p><p>​    得出分数后，然后对得出的结果进行NMS 非极大值抑值运算，剩下的边框即为结果</p><h3 id="4bounding-box-regression-边界框回归"><a class="markdownIt-Anchor" href="#4bounding-box-regression-边界框回归"></a> 4.<strong>Bounding-box regression</strong> 边界框回归</h3><p>​      目的是将过最终得到的边框结果在进行一个调整。让得到的结果更接近真实的边框。边界框回归的输入为CNN网络卷积层的输出，也就是第五层的输出。</p><p>分析：未完待续</p><h2 id="rcnn的优缺点分析"><a class="markdownIt-Anchor" href="#rcnn的优缺点分析"></a> Rcnn的优缺点分析</h2><p>优点：检测的的精度高</p><p>缺点：</p><p>1.检测一张图片速度慢，要经过卷积神经网络提取特征，还需要经过SVM分类器进行分类，最后进行边框回复。</p><p>2.训练时间长，需要进行调优训练，和SVM回归器训练。</p><p>补充。。。</p><h2 id="rcnn-的一些问题"><a class="markdownIt-Anchor" href="#rcnn-的一些问题"></a> Rcnn 的一些问题</h2><p>待补充。。。</p><p>[TOC]</p><p>网上找了一张图，来源（侵删）</p><p><img src="/2020/09/13/paper/R-CNN/6.png" alt="6"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h6 id=&quot;论文标题rich-feature-hierarchies-for-accurate-object-detection-and-semantic-segmentation&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#论文标题rich-f</summary>
+    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;论文简介&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#论文简介&quot;&gt;&lt;/a&gt; 论文简介&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;论文标题   </summary>
       
     
     
+    
+    <category term="论文" scheme="http://qiujunlin.github.com/categories/%E8%AE%BA%E6%96%87/"/>
     
     
     <category term="R-CNN" scheme="http://qiujunlin.github.com/tags/R-CNN/"/>
