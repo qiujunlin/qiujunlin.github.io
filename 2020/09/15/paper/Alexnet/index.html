@@ -17,16 +17,22 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>AlexNet 论文解析 | Hexo</title>
-  <meta property="og:type" content="article">
-<meta property="og:title" content="AlexNet 论文解析">
+  <title>AlexNet 论文笔记 | Hexo</title>
+  <meta name="description" content="[TOC]    论文标题 ImageNet Classification with Deep Convolutional Neural Networks     作者 Alex Krizhevsky   Ilya Sutskever   Geoffrey E.Hinton   发布时间 2012     摘要： 首先是吹嘘网络很厉害，有很低的错误率，有很大的数据模型，为减少过拟合采用了dropo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AlexNet 论文笔记">
 <meta property="og:url" content="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/index.html">
 <meta property="og:site_name" content="xiaoqiu">
+<meta property="og:description" content="[TOC]    论文标题 ImageNet Classification with Deep Convolutional Neural Networks     作者 Alex Krizhevsky   Ilya Sutskever   Geoffrey E.Hinton   发布时间 2012     摘要： 首先是吹嘘网络很厉害，有很低的错误率，有很大的数据模型，为减少过拟合采用了dropo">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/1.jpg">
+<meta property="og:image" content="https://math.jianshu.com/math?formula=s%20%3D%202%EF%BC%8Cz%20%3D%202">
 <meta property="article:published_time" content="2020-09-15T10:55:10.000Z">
-<meta property="article:modified_time" content="2020-09-15T10:55:56.782Z">
+<meta property="article:modified_time" content="2020-09-17T15:44:26.447Z">
 <meta property="article:author" content="qiujunlin">
+<meta property="article:tag" content="AlexNet">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/1.jpg">
   <!-- Canonical links -->
   <link rel="canonical" href="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/index.html">
   
@@ -216,7 +222,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -226,7 +232,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlexNet/" rel="tag">AlexNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -236,7 +242,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
+      <a href="/tags/AlexNet/" style="font-size: 13px;">AlexNet</a> <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/test/" style="font-size: 13px;">test</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
     </div>
   </div>
 
@@ -245,7 +251,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -264,7 +270,22 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2020/09/15/paper/Alexnet/" class="title">AlexNet 论文解析</a>
+                <a href="/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="title">page</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-16T09:23:44.000Z" itemprop="datePublished">2020-09-16</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/15/paper/Alexnet/" class="title">AlexNet 论文笔记</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-15T10:55:10.000Z" itemprop="datePublished">2020-09-15</time>
@@ -279,7 +300,7 @@
                 <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a>
               </p>
               <p class="item-title">
-                <a href="/2020/09/13/paper/R-CNN/" class="title">R-CNN 论文解析</a>
+                <a href="/2020/09/13/paper/R-CNN/" class="title">R-CNN 论文笔记</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-13T06:52:08.000Z" itemprop="datePublished">2020-09-13</time>
@@ -317,21 +338,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/test/">test</a>
-              </p>
-              <p class="item-title">
-                <a href="/2020/09/02/my-first-blog/" class="title">my-first-blog</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-09-02T10:45:53.000Z" itemprop="datePublished">2020-09-02</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -352,7 +358,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      AlexNet 论文解析
+      AlexNet 论文笔记
     </h1>
   
 
@@ -365,7 +371,17 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/AlexNet/" rel="tag">AlexNet</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -379,17 +395,124 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/15/paper/Alexnet/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.1k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>[TOC]</p>
+<table>
+<thead>
+<tr>
+<th>论文标题</th>
+<th>ImageNet Classification with Deep Convolutional Neural Networks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作者</td>
+<td>Alex Krizhevsky   Ilya Sutskever   Geoffrey E.Hinton</td>
+</tr>
+<tr>
+<td>发布时间</td>
+<td>2012</td>
+</tr>
+</tbody>
+</table>
+<h2 id="摘要"><a class="markdownIt-Anchor" href="#摘要"></a> 摘要：</h2>
+<p>首先是吹嘘网络很厉害，有很低的错误率，有很大的数据模型，为减少过拟合采用了dropout，用非饱和函数提升了速度。并赢得了ILSVRC-2012 的冠军。</p>
+<h2 id="创新点"><a class="markdownIt-Anchor" href="#创新点"></a> 创新点</h2>
+<ol>
+<li>是最大的卷积神经网络。用8层结构（5层卷积和3层全连接） 效果更好</li>
+<li>采用多GPU训练的方式，更快</li>
+<li>使用dropout,Data Augementation 抑制过拟合</li>
+<li>使用ReLU Nonlinearity和Overlapping Pooling增加了网络的速度</li>
+</ol>
+<h2 id="网络结构"><a class="markdownIt-Anchor" href="#网络结构"></a> 网络结构</h2>
+<p><img src="/2020/09/15/paper/Alexnet/1.jpg" alt="1"></p>
+<p>网络介绍，网络包含8层，其中前五层的卷积层，后三层是全连接层，最后一层的输出是1000个神经元，作为softmax层的输入。</p>
+<h5 id="1卷积层1"><a class="markdownIt-Anchor" href="#1卷积层1"></a> 1.卷积层1</h5>
+<p>输入224224，发现224并不能整除，查阅资料使用227的输入，（227-11+0+4）/4=55,刚好合适。输出分为两组，每一组为 27x27x48，分别在两个GPU上面运行。处理流程</p>
+<ul>
+<li>
+<p>cnn  stride=4，两组kernel size=11x11x3，48+48=96个卷积核，两组feature map =55x55x48</p>
+</li>
+<li>
+<p>Relu函数</p>
+</li>
+<li>
+<p>Pooling stride=2，两组kernel size=3x3，两组feature map =27X27X48</p>
+</li>
+<li>
+<p>局部想赢归一化</p>
+</li>
+</ul>
+<h5 id="2卷积层2"><a class="markdownIt-Anchor" href="#2卷积层2"></a> 2.卷积层2</h5>
+<p>处理流程，输入 两组27x27x48输出两组。</p>
+<ul>
+<li>
+<p>卷积 stride=1，padding=2，两组kernel size=3x3x48，128+128个卷积核，每组feature map =27x27x128</p>
+</li>
+<li>
+<p>Relu函数</p>
+</li>
+<li>
+<p>Pooling stride=2，两组kernel size=3x3，每组feature map =13X13X128</p>
+</li>
+<li>
+<p>局部响应归一化</p>
+</li>
+</ul>
+<h5 id="3卷积层3"><a class="markdownIt-Anchor" href="#3卷积层3"></a> 3.卷积层3</h5>
+<p>处理流程，输出两组，于前面两层不同的是这一层将前面两个GPU的所有输出作为输入，也就是13x13x256，而前面两层只是将自己上一层的输入作为输出。</p>
+<ul>
+<li>卷积 stride=1，padding=1，两组kernel size=3x3x256，192+192个卷积核，每组feature map =13x13x192</li>
+<li>Relu函数</li>
+</ul>
+<h5 id="4卷积层4"><a class="markdownIt-Anchor" href="#4卷积层4"></a> 4.卷积层4</h5>
+<p>处理流程，和第三层相似，输入 l两组13x13x192，与上一个GPU直接相连</p>
+<ul>
+<li>卷积 stride=1，padding=1，两组kernel size=3x3x192，192+192个卷积核，每组feature map =13x13x192</li>
+<li>Relu函数</li>
+<li></li>
+</ul>
+<h5 id="5卷积层5"><a class="markdownIt-Anchor" href="#5卷积层5"></a> 5.卷积层5</h5>
+<p>处理流程，输入两组 13x13x1932</p>
+<ul>
+<li>卷积 stride=1，padding=1，两组kernel size=3x3x192，128+128个卷积核，每组feature map =13x13x128</li>
+<li>Relu函数</li>
+<li>池化，kerenel_size=3x3,stride =2, 输出两组6x6x128</li>
+</ul>
+<h5 id="6全连接层67"><a class="markdownIt-Anchor" href="#6全连接层67"></a> 6.全连接层6,7</h5>
+<ul>
+<li>将卷积层输出的特征resahpe为 6x6x256=4096,每一层的输出为4096个神经元。输出为4096x1x1，权值矩阵为4096x4096。</li>
+<li>relu函数</li>
+<li>droupout，抑制过拟合</li>
+</ul>
+<h5 id="7全连接层-输出层"><a class="markdownIt-Anchor" href="#7全连接层-输出层"></a> 7.全连接层 输出层</h5>
+<p>第八层是再连接到一个大小为1000的全连接层中，用softmax，来算1000种分类的分布。输出为1000x1</p>
+<h2 id="数据增强"><a class="markdownIt-Anchor" href="#数据增强"></a> 数据增强</h2>
+<ol>
+<li>随机裁剪，对256×2562的图片进行随机提取，大小为224×224，然后进行水平翻转。一共生成32x32x2=2048张图片，使训练集增大了2048倍</li>
+<li>测试的时候，对左上、右上、左下、右下、中间提取了图像块，然后翻转，共10个裁剪，之后对softmax的结果求平均。</li>
+<li>第二种数据增强方式包括改变训练图像的RGB通道的强度。（不懂）</li>
+</ol>
+<h2 id="relu-nonlinearity"><a class="markdownIt-Anchor" href="#relu-nonlinearity"></a> ReLU Nonlinearity</h2>
+<p>使用集合函数的作用是将网络中的线性运算变为非线性运算。</p>
+<p>使用relu比原理的sigmoid函数更快，大约有六倍的提升。原因是relu函数更简单，计算速度更快。</p>
+<h2 id="层叠池化"><a class="markdownIt-Anchor" href="#层叠池化"></a> 层叠池化</h2>
+<p>在池化的时候，每次移动的步长小于池化的窗口长度。AlexNet池化的大小为3×3的正方形，每次池化移动步长为2，这样就会出现重叠。这个方案分别降低了<code>top-1 0.4%</code>，<code>top-5 0.3%</code>的错误率，与非重叠方案<img src="https://math.jianshu.com/math?formula=s%20%3D%202%EF%BC%8Cz%20%3D%202" alt="s = 2，z = 2">相比，输出的维度是相等的。这个方案降低了拟合。</p>
+<h2 id="局部相应归一化"><a class="markdownIt-Anchor" href="#局部相应归一化"></a> 局部相应归一化</h2>
+<p>LRN加在RELU的激活后面，能够增加网络的泛化能力（是指机器学习算法对新鲜样本的适应能力）。局部归一化分别减少了top-1 1.4%，top-5 1.2%的错误率。</p>
+<p>具体公式没看懂</p>
+<h2 id="dropout"><a class="markdownIt-Anchor" href="#dropout"></a> Dropout</h2>
+<p>Dropout主要是为了防止过拟合。，它会以0.5的概率对每个隐层神经元的输出设为0。那些用这种方式“丢弃”的神经元不再进行前向传播并且不参与反向传播。就如同在网络中被删除了一样，同时保持输入层与输出层神经元的个数不变，然后按照神经网络的学习方法进行参数更新。</p>
+
       
     </div>
     <div class="article-footer">
@@ -398,7 +521,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/" title="AlexNet 论文解析" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/15/paper/Alexnet/</a>
+      <a href="http://qiujunlin.github.com/2020/09/15/paper/Alexnet/" title="AlexNet 论文笔记" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/15/paper/Alexnet/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -444,9 +567,13 @@
   
   <ul class="pager pull-left">
     
+    <li class="prev">
+      <a href="/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="page"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
     
     <li class="next">
-      <a href="/2020/09/13/paper/R-CNN/" title="R-CNN 论文解析"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/09/13/paper/R-CNN/" title="R-CNN 论文笔记"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
