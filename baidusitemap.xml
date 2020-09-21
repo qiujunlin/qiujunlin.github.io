@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</loc>
+    <lastmod>2020-09-21</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2020-09-20</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/20/c++/c++Primer/note/</loc>
+    <lastmod>2020-09-20</lastmod>
+  </url>
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
     <lastmod>2020-09-18</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/15/paper/Alexnet/</loc>
     <lastmod>2020-09-17</lastmod>
-  </url>
-  <url>
-    <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2020-09-16</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/08/13/thems/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
@@ -23,13 +31,5 @@
   <url>
     <loc>http://qiujunlin.github.com/2020/09/12/python/bug/'Tensor'%20object%20is%20not%20callable/</loc>
     <lastmod>2020-09-12</lastmod>
-  </url>
-  <url>
-    <loc>http://qiujunlin.github.com/2020/09/02/my-first-blog/</loc>
-    <lastmod>2020-09-02</lastmod>
-  </url>
-  <url>
-    <loc>http://qiujunlin.github.com/2020/09/01/hello-world/</loc>
-    <lastmod>2020-09-01</lastmod>
   </url>
 </urlset> 
