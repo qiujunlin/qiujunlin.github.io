@@ -26,7 +26,7 @@
 <meta property="og:description" content="1.引用   C++中所有的引用类型都要和与之绑定的类型严格匹配（指的是在定义的时候，如果是在定义后重新赋值，不会出现）。不能出现强制性转换。   而且，引用只能绑定在对象上，而不能绑定在字面值或者某个表达式的计算结果绑定在一起。两种情况除外： 允许const int &amp;a 绑定到一个普通的int对象上。   引用必须被初始化。    指针  不能把int型变量直接赋值给指针，空指针的值">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-20T01:38:37.000Z">
-<meta property="article:modified_time" content="2020-09-20T09:10:04.098Z">
+<meta property="article:modified_time" content="2020-09-22T14:30:41.440Z">
 <meta property="article:author" content="qiujunlin">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -279,7 +279,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/c/">c++</a>
+                <a class="category-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a>
               </p>
               <p class="item-title">
                 <a href="/2020/09/20/c++/c++Primer/note/" class="title">C++ primer读书笔记</a>
@@ -370,7 +370,7 @@
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/c/">c++</a>
+    <a class="article-category-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a>
   </span>
 
         
@@ -392,7 +392,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/20/c++/c++Primer/note/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 174(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 317(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -418,6 +418,14 @@
 <ol>
 <li>不能把int型变量直接赋值给指针，空指针的值为0，但是不能直接赋值为int 0，赋值方式为 int *a=nullpplt;或者 =0</li>
 </ol>
+<h5 id="运算符"><a class="markdownIt-Anchor" href="#运算符"></a> 运算符</h5>
+<p>解引用运算符的优先级低于点运算符</p>
+<p>条件运算符的优先级很低，因此当一条长表达式中嵌套了条件运算表达式的时候，通常需要在两端加括号。</p>
+<p>case的标签必须是整形常量表达式</p>
+<h5 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h5>
+<p>定义函数参数，尽量使用常量引用，避免产生错误！</p>
+<p>参数使用引用的原因，使用非引用 类型的参数的时候，初始值会被拷贝给变量。</p>
+<p>C++中尽量使用引用代替指针。</p>
 
       
     </div>

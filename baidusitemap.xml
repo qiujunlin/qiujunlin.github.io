@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</loc>
-    <lastmod>2020-09-21</lastmod>
-  </url>
-  <url>
     <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2020-09-20</lastmod>
+    <lastmod>2020-09-23</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/20/c++/c++Primer/note/</loc>
-    <lastmod>2020-09-20</lastmod>
+    <lastmod>2020-09-22</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</loc>
+    <lastmod>2020-09-21</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
