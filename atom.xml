@@ -6,7 +6,7 @@
   <link href="http://qiujunlin.github.com/atom.xml" rel="self"/>
   
   <link href="http://qiujunlin.github.com/"/>
-  <updated>2020-09-21T08:00:33.531Z</updated>
+  <updated>2020-09-29T10:46:33.305Z</updated>
   <id>http://qiujunlin.github.com/</id>
   
   <author>
@@ -17,24 +17,82 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>处理轨迹坐标，计算经纬度两点距离，去飘点</title>
+    <link href="http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/"/>
+    <id>http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/</id>
+    <published>2020-09-29T10:42:18.000Z</published>
+    <updated>2020-09-29T10:46:33.305Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>首先是对汽车行驶轨迹坐标的处理，分割，并保存为list</p></li><li><p>对坐标进行去重</p></li><li><p>去两点距离大于某个阈值的坐标进行删除</p><p>代码如下：</p></li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sin, asin, cos, radians, fabs, sqrt</span><br><span class="line">EARTH_RADIUS = <span class="number">6371</span>  <span class="comment"># 地球平均半径，6371km</span></span><br><span class="line">THRESHOLD=<span class="number">0.5</span>  <span class="comment"># 两点之间的距离阈值 ，大于这个剧删除这个点</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>():</span></span><br><span class="line">    str=<span class="string">&quot;106.608105,29.355106;106.608105,29.355106;106.608105,29.355106;106.608105,29.355106;106.605595,29.353342;106.606981,29.346376;106.606268,29.349908;106.606933,29.346584;106.606791,29.347488;106.606981,29.346378;106.606415,29.349166;106.60698,29.34638;106.606625,29.348288;106.606981,29.346378;106.606981,29.346378;106.606981,29.346378;106.606981,29.346376;106.606981,29.346376;106.606981,29.346376;106.606981,29.346378;106.607183,29.345708;106.607286,29.34531;106.607401,29.344826;106.607378,29.344568;106.606896,29.34448;106.606141,29.34432;106.605955,29.344214;106.606396,29.34433;106.606836,29.344434;106.606963,29.344118;106.607091,29.343564&quot;</span></span><br><span class="line">    arr=str.split(<span class="string">&quot;;&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> i, value <span class="keyword">in</span> enumerate(arr):</span><br><span class="line">        arr[i]=value.split(<span class="string">&quot;,&quot;</span>)</span><br><span class="line">        arr[i][<span class="number">0</span>]=float(arr[i][<span class="number">0</span>])</span><br><span class="line">        arr[i][<span class="number">1</span>] = float(arr[i][<span class="number">1</span>])</span><br><span class="line">    arr1=[]</span><br><span class="line">    print(arr)</span><br><span class="line">    <span class="comment">#删除重复元素</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> arr:</span><br><span class="line">      <span class="keyword">if</span> <span class="keyword">not</span> i <span class="keyword">in</span> arr1:</span><br><span class="line">                arr1.append(i)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#删除两点距离大于阈值的结果</span></span><br><span class="line">    arr2=[] <span class="comment">#记录过滤后的结果</span></span><br><span class="line">    <span class="keyword">for</span> i, value <span class="keyword">in</span> enumerate(arr1):</span><br><span class="line">        <span class="keyword">if</span> i+<span class="number">1</span>&gt;=len(arr1) :</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        print(get_distance_hav(value[<span class="number">0</span>],value[<span class="number">1</span>],arr1[i+<span class="number">1</span>][<span class="number">0</span>],arr1[i+<span class="number">1</span>][<span class="number">1</span>]))</span><br><span class="line">        <span class="keyword">if</span> (get_distance_hav(value[<span class="number">0</span>],value[<span class="number">1</span>],arr1[i+<span class="number">1</span>][<span class="number">0</span>],arr1[i+<span class="number">1</span>][<span class="number">1</span>]))&lt;<span class="number">1</span>:</span><br><span class="line">           arr2.append(value)</span><br><span class="line">    arr2.append(arr[<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#根据经纬度计算坐标</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hav</span>(<span class="params">theta</span>):</span></span><br><span class="line">    s = sin(theta / <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> s * s</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_distance_hav</span>(<span class="params">lat0, lng0, lat1, lng1</span>):</span></span><br><span class="line">    <span class="string">&quot;用haversine公式计算球面两点间的距离。&quot;</span></span><br><span class="line">    <span class="comment"># 经纬度转换成弧度</span></span><br><span class="line">    lat0 = radians(lat0)</span><br><span class="line">    lat1 = radians(lat1)</span><br><span class="line">    lng0 = radians(lng0)</span><br><span class="line">    lng1 = radians(lng1)</span><br><span class="line"></span><br><span class="line">    dlng = fabs(lng0 - lng1)</span><br><span class="line">    dlat = fabs(lat0 - lat1)</span><br><span class="line">    h = hav(dlat) + cos(lat0) * cos(lat1) * hav(dlng)</span><br><span class="line">    distance = <span class="number">2</span> * EARTH_RADIUS * asin(sqrt(h))</span><br><span class="line">    <span class="keyword">return</span> distance</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先是对汽车行驶轨迹坐标的处理，分割，并保存为list&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对坐标进行去重&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;去两点距离大于某个阈值的坐标进行删除&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure</summary>
+      
+    
+    
+    
+    <category term="studynote" scheme="http://qiujunlin.github.com/categories/studynote/"/>
+    
+    
+    <category term="study" scheme="http://qiujunlin.github.com/tags/study/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rgb学习笔记</title>
+    <link href="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/"/>
+    <id>http://qiujunlin.github.com/2020/09/26/studynotes/RGB/</id>
+    <published>2020-09-26T02:17:43.000Z</published>
+    <updated>2020-09-26T02:20:16.553Z</updated>
+    
+    <content type="html"><![CDATA[<p>红色（<strong>R</strong>ed）、绿色（<strong>G</strong>reen）、蓝色（<strong>B</strong>lue）被称为<strong>光的三原色</strong>。</p><p>每一种颜色有256份，用一个字节来表示</p><p>8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。</p><p>每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好是1个字节；因此每个像素要占用3个字节。而每个像素可能显示的颜色总数是256×256×256=1677216种。</p><p>一张300像素×200像素宽高的RGB照片，它有60000个像素点，就应该占用60000×3=180000个字节(B)，180000÷1024≈175.8K的空间</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;红色（&lt;strong&gt;R&lt;/strong&gt;ed）、绿色（&lt;strong&gt;G&lt;/strong&gt;reen）、蓝色（&lt;strong&gt;B&lt;/strong&gt;lue）被称为&lt;strong&gt;光的三原色&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;每一种颜色有256份，用一个字节来表示&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Learning route</title>
     <link href="http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/"/>
     <id>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</id>
     <published>2020-09-21T07:22:07.000Z</published>
-    <updated>2020-09-21T08:00:33.531Z</updated>
+    <updated>2020-09-26T05:18:58.365Z</updated>
     
-    <content type="html"><![CDATA[<p>总学习计划：</p><p>课题学习：</p><p>每周看一篇论文。做好笔记。尽量用python复现。</p><p>开发学习：</p><p>研一：数据库，c++，linux，算法，</p><p>算法：每天一道书算法题。慢慢开始。</p><p>C++： C++primer看完</p>]]></content>
+    <content type="html"><![CDATA[<p>目标：尽快发一篇论文</p><p>总学习计划：</p><p>课题学习：</p><p>每周看一篇论文。做好笔记。尽量用python复现。</p><p>开发学习：</p><p>研一：数据库，c++，linux，算法，</p><p>算法：每天一道书算法题。慢慢开始。</p><p>C++： C++primer看完</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;总学习计划：&lt;/p&gt;
+    <summary type="html">&lt;p&gt;目标：尽快发一篇论文&lt;/p&gt;
+&lt;p&gt;总学习计划：&lt;/p&gt;
 &lt;p&gt;课题学习：&lt;/p&gt;
 &lt;p&gt;每周看一篇论文。做好笔记。尽量用python复现。&lt;/p&gt;
 &lt;p&gt;开发学习：&lt;/p&gt;
 &lt;p&gt;研一：数据库，c++，linux，算法，&lt;/p&gt;
-&lt;p&gt;算法：每天一道书算法题。慢慢开始。&lt;/p&gt;
-&lt;p&gt;C++： C++pri</summary>
+&lt;p&gt;算法：每天一道书算法题。慢慢开始。&lt;</summary>
       
     
     
@@ -74,15 +132,20 @@
     <link href="http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2020-09-16T09:23:44.000Z</published>
-    <updated>2020-09-23T11:09:41.494Z</updated>
+    <updated>2020-09-26T04:44:24.688Z</updated>
     
-    <content type="html"><![CDATA[<p>1.矩阵截取某一行或一列，截取某一列出来 是一维的数据，并不是nx1的数据。</p><p><img src="/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/E:%5Cblog%5Cmyblog%5Csource_posts%5Cpython%5Cknow%5Cimage-20200923190934389.png" alt="image-20200923190934389"></p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>矩阵截取某一行或一列，截取某一列出来 是一维的数据，并不是nx1的数据。</p></li><li><p>Python 3以后  ：    &quot; / “就表示 浮点数除法，返回浮点结果;” // &quot;表示整数除法。</p></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;1.矩阵截取某一行或一列，截取某一列出来 是一维的数据，并不是nx1的数据。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/E:%5Cblog%5Cmyblog%5</summary>
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;矩阵截取某一行或一列，截取某一列出来 是一维的数据，并不是nx1的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python 3以后  ：    	&amp;quot; / “就表示 浮点数除法，返回浮点结果;” // &amp;quot;表示整数除法。&lt;/p&gt;
+&lt;/li</summary>
       
     
     

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/</loc>
+    <lastmod>2020-09-29</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</loc>
+    <lastmod>2020-09-26</lastmod>
+  </url>
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2020-09-23</lastmod>
+    <lastmod>2020-09-26</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/26/studynotes/RGB/</loc>
+    <lastmod>2020-09-26</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/20/c++/c++Primer/note/</loc>
     <lastmod>2020-09-22</lastmod>
-  </url>
-  <url>
-    <loc>http://qiujunlin.github.com/2020/09/21/studynotes/Learningroute/</loc>
-    <lastmod>2020-09-21</lastmod>
   </url>
   <url>
     <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
