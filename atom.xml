@@ -6,7 +6,7 @@
   <link href="http://qiujunlin.github.com/atom.xml" rel="self"/>
   
   <link href="http://qiujunlin.github.com/"/>
-  <updated>2020-09-29T10:46:33.305Z</updated>
+  <updated>2020-09-29T12:19:20.001Z</updated>
   <id>http://qiujunlin.github.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二叉树的遍历，递归和迭代方法</title>
+    <link href="http://qiujunlin.github.com/2020/09/29/algorithm/145/"/>
+    <id>http://qiujunlin.github.com/2020/09/29/algorithm/145/</id>
+    <published>2020-09-29T12:18:31.000Z</published>
+    <updated>2020-09-29T12:19:20.001Z</updated>
+    
+    
+    
+    
+    <category term="algorithm" scheme="http://qiujunlin.github.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="http://qiujunlin.github.com/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>处理轨迹坐标，计算经纬度两点距离，去飘点</title>
@@ -244,19 +261,68 @@
   </entry>
   
   <entry>
+    <title>bug合集</title>
+    <link href="http://qiujunlin.github.com/2020/09/07/python/bug/ValueError%20too%20many%20values%20to%20unpack%20(expected%202)/"/>
+    <id>http://qiujunlin.github.com/2020/09/07/python/bug/ValueError%20too%20many%20values%20to%20unpack%20(expected%202)/</id>
+    <published>2020-09-07T15:48:09.000Z</published>
+    <updated>2020-09-30T08:47:35.213Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bug1-valueerror-too-many-values-to-unpack-expected-2"><a class="markdownIt-Anchor" href="#bug1-valueerror-too-many-values-to-unpack-expected-2"></a> bug1 ValueError: too many values to unpack (expected 2)</h2><p>在提取数据的过程中</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTwo</span>(<span class="params">self,name1,name2</span>):</span></span><br><span class="line">    res=[]</span><br><span class="line">    print(name1)</span><br><span class="line">    print(name2)</span><br><span class="line">    num1=self.getColValues(int(name1))</span><br><span class="line">    num2=self.getColValues(int(name2))</span><br><span class="line">    <span class="keyword">for</span> x,y <span class="keyword">in</span> (num1,num2):</span><br><span class="line">        res.append(str(x)+<span class="string">&#x27;,&#x27;</span>+str(y))</span><br><span class="line">    res=set(res)</span><br><span class="line">    <span class="keyword">return</span>  res;</span><br></pre></td></tr></table></figure><p>出现 了 ValueError: too many values to unpack (expected 2)</p><p>解决方法：python只支持对于key的遍历，所以不能使用for k,v这种形式，这个时候会提示ValueError: too many values to unpack，<br>正确代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for key, value in class_attrs.items():</span><br><span class="line">或者是</span><br><span class="line">for key, value in zip（X,y）</span><br></pre></td></tr></table></figure><h2 id="bug2-typeerror-xxx-missing-1-required-positional-argument-astr"><a class="markdownIt-Anchor" href="#bug2-typeerror-xxx-missing-1-required-positional-argument-astr"></a> bug2 TypeError: xxx() missing 1 required positional argument: ‘astr’</h2><p>原因有调用错误，吧用类调用方法，改为用self调用方法，</p><p>python同一个类中不同的函数互相调用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class AAA:</span><br><span class="line">    def aaa(self):</span><br><span class="line">        self.bbb()</span><br><span class="line">    def bbb(self):</span><br><span class="line">        print(&#39;222&#39;)</span><br><span class="line">a &#x3D; AAA()</span><br><span class="line">a.aaa()</span><br><span class="line"> </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;bug1-valueerror-too-many-values-to-unpack-expected-2&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#bug1-valueerror-too-many-values-to-unpack-</summary>
+      
+    
+    
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/categories/bug/"/>
+    
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dimension out of range (expected to be in range of [-1, 0], but got 1)</title>
-    <link href="http://qiujunlin.github.com/2020/09/07/python/bug/bug1/"/>
-    <id>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</id>
+    <link href="http://qiujunlin.github.com/2020/09/07/python/bug/bug2/"/>
+    <id>http://qiujunlin.github.com/2020/09/07/python/bug/bug2/</id>
     <published>2020-09-07T15:48:09.000Z</published>
     <updated>2020-09-12T09:53:19.501Z</updated>
     
-    <content type="html"><![CDATA[<p>在Pytorch中，我想通过点乘操作得到S:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//   点乘操作</span><br><span class="line">    S=a.mm(b)</span><br></pre></td></tr></table></figure><p>运行代码时，老是报错:<br /><u>RuntimeError: dimension out of range (expected to be in range of [-1, 0], but got 1)</u></p><p>输出a和b的维度发现： a的形状为 [20 , 5], 但是b的形状为[5 , ]。考虑用pytorch中的view函数，改变b的形状为[5,1]：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的形状为[<span class="number">5</span>,]:   tensor([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line">//  view后b的形状为[<span class="number">5</span>,<span class="number">1</span>]: tensor([ [<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>], [<span class="number">4</span>], [<span class="number">5</span>]], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    b=b.view(len(b),<span class="number">1</span>)</span><br><span class="line">    S=a.mm(b)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>从numpy.array( )的数组中，取某一行的数据转换成pytorch变量时，容易出现这个问题。类似地，也可以提前考虑用numpy.reshape( )改变所取的那一行数据，再转换成pytorch变量，再进行点乘运算。代码如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的格式为:  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">// reshape后b的格式为: [ [<span class="number">1.</span>] [<span class="number">2.</span>] [<span class="number">3.</span>] [<span class="number">4.</span>] [<span class="number">5.</span>] ]</span><br><span class="line"></span><br><span class="line">   b = numpy.reshape(b,(len(b),<span class="number">1</span>))</span><br><span class="line">   b = Variable(</span><br><span class="line">         torch.from_numpy(b).type(T.FloatTensor))</span><br><span class="line">   S=a.mm(b)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>在Pytorch中，我想通过点乘操作得到S:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//   点乘操作</span><br><span class="line">    S=a.mm(b)</span><br></pre></td></tr></table></figure><p>运行代码时，老是报错:<br><u>RuntimeError: dimension out of range (expected to be in range of [-1, 0], but got 1)</u></p><p>输出a和b的维度发现： a的形状为 [20 , 5], 但是b的形状为[5 , ]。考虑用pytorch中的view函数，改变b的形状为[5,1]：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的形状为[<span class="number">5</span>,]:   tensor([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line">//  view后b的形状为[<span class="number">5</span>,<span class="number">1</span>]: tensor([ [<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>], [<span class="number">4</span>], [<span class="number">5</span>]], device=<span class="string">&#x27;cuda:0&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    b=b.view(len(b),<span class="number">1</span>)</span><br><span class="line">    S=a.mm(b)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>从numpy.array( )的数组中，取某一行的数据转换成pytorch变量时，容易出现这个问题。类似地，也可以提前考虑用numpy.reshape( )改变所取的那一行数据，再转换成pytorch变量，再进行点乘运算。代码如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//  b最先的格式为:  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">// reshape后b的格式为: [ [<span class="number">1.</span>] [<span class="number">2.</span>] [<span class="number">3.</span>] [<span class="number">4.</span>] [<span class="number">5.</span>] ]</span><br><span class="line"></span><br><span class="line">   b = numpy.reshape(b,(len(b),<span class="number">1</span>))</span><br><span class="line">   b = Variable(</span><br><span class="line">         torch.from_numpy(b).type(T.FloatTensor))</span><br><span class="line">   S=a.mm(b)</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;在Pytorch中，我想通过点乘操作得到S:&lt;/p&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/categories/bug/"/>
+    
+    
+    <category term="bug" scheme="http://qiujunlin.github.com/tags/bug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dimension out of range (expected to be in range of [-1, 0], but got 1)</title>
+    <link href="http://qiujunlin.github.com/2020/09/07/python/bug/bugs/"/>
+    <id>http://qiujunlin.github.com/2020/09/07/python/bug/bugs/</id>
+    <published>2020-09-07T15:48:09.000Z</published>
+    <updated>2020-09-30T02:33:40.014Z</updated>
+    
+    <content type="html"><![CDATA[<p>在提取数据的过程中</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTwo</span>(<span class="params">self,name1,name2</span>):</span></span><br><span class="line">    res=[]</span><br><span class="line">    print(name1)</span><br><span class="line">    print(name2)</span><br><span class="line">    num1=self.getColValues(int(name1))</span><br><span class="line">    num2=self.getColValues(int(name2))</span><br><span class="line">    <span class="keyword">for</span> x,y <span class="keyword">in</span> zip(num1,num2):</span><br><span class="line">        res.append(str(x)+<span class="string">&#x27;,&#x27;</span>+str(y))</span><br><span class="line">    res=set(res)</span><br><span class="line">    <span class="keyword">return</span>  res;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在提取数据的过程中&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp</summary>
       
     
     

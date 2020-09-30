@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://qiujunlin.github.com/2020/09/07/python/bug/ValueError%20too%20many%20values%20to%20unpack%20(expected%202)/</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bugs/</loc>
+    <lastmod>2020-09-30</lastmod>
+  </url>
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/29/algorithm/145/</loc>
+    <lastmod>2020-09-29</lastmod>
+  </url>
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/</loc>
     <lastmod>2020-09-29</lastmod>
   </url>
@@ -33,7 +45,7 @@
     <lastmod>2020-09-14</lastmod>
   </url>
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug1/</loc>
+    <loc>http://qiujunlin.github.com/2020/09/07/python/bug/bug2/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
