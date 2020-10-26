@@ -17,20 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>rgb学习笔记 | Hexo</title>
-  <meta name="description" content="红色（Red）、绿色（Green）、蓝色（Blue）被称为光的三原色。 每一种颜色有256份，用一个字节来表示 8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。 每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好">
+  <title>C++ bug | Hexo</title>
+  <meta name="description" content="1.## non-const lvalue reference to type ‘int’ cannot bind to a temporary of type ‘int’ 如果一个参数是以非const引用传入，c编译器就有理由认为程序员会在函数中修改这个值，并且这个被修改的引用在函数返回后要发挥作用。但如果你把一个临时变量当作非const引用参数传进来，由于临时变量的特殊性，程序员并不能操作临">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rgb学习笔记">
-<meta property="og:url" content="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/index.html">
+<meta property="og:title" content="C++ bug">
+<meta property="og:url" content="http://qiujunlin.github.com/2020/09/20/c++/bug/bug/index.html">
 <meta property="og:site_name" content="xiaoqiu">
-<meta property="og:description" content="红色（Red）、绿色（Green）、蓝色（Blue）被称为光的三原色。 每一种颜色有256份，用一个字节来表示 8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。 每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好">
+<meta property="og:description" content="1.## non-const lvalue reference to type ‘int’ cannot bind to a temporary of type ‘int’ 如果一个参数是以非const引用传入，c编译器就有理由认为程序员会在函数中修改这个值，并且这个被修改的引用在函数返回后要发挥作用。但如果你把一个临时变量当作非const引用参数传进来，由于临时变量的特殊性，程序员并不能操作临">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-26T02:17:43.000Z">
-<meta property="article:modified_time" content="2020-09-26T02:20:16.553Z">
+<meta property="article:published_time" content="2020-09-20T01:38:37.000Z">
+<meta property="article:modified_time" content="2020-10-08T12:37:10.265Z">
 <meta property="article:author" content="qiujunlin">
+<meta property="article:tag" content="C++bug">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/index.html">
+  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/20/c++/bug/bug/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
   
@@ -347,14 +348,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-studynotes/RGB" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-c++/bug/bug" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      rgb学习笔记
+      C++ bug
     </h1>
   
 
@@ -362,12 +363,22 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/09/26/studynotes/RGB/" class="article-date">
-	  <time datetime="2020-09-26T02:17:43.000Z" itemprop="datePublished">2020-09-26</time>
+	<a href="/2020/09/20/c++/bug/bug/" class="article-date">
+	  <time datetime="2020-09-20T01:38:37.000Z" itemprop="datePublished">2020-09-20</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/C-bug/">C++bug</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/C-bug/" rel="tag">C++bug</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -378,10 +389,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/26/studynotes/RGB/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/20/c++/bug/bug/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 219(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 282(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -391,11 +402,10 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>红色（<strong>R</strong>ed）、绿色（<strong>G</strong>reen）、蓝色（<strong>B</strong>lue）被称为<strong>光的三原色</strong>。</p>
-<p>每一种颜色有256份，用一个字节来表示</p>
-<p>8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。</p>
-<p>每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好是1个字节；因此每个像素要占用3个字节。而每个像素可能显示的颜色总数是256×256×256=1677216种。</p>
-<p>一张300像素×200像素宽高的RGB照片，它有60000个像素点，就应该占用60000×3=180000个字节(B)，180000÷1024≈175.8K的空间</p>
+        <h5 id="1-non-const-lvalue-reference-to-type-int-cannot-bind-to-a-temporary-of-type-int"><a class="markdownIt-Anchor" href="#1-non-const-lvalue-reference-to-type-int-cannot-bind-to-a-temporary-of-type-int"></a> 1.## non-const lvalue reference to type ‘int’ cannot bind to a temporary of type ‘int’</h5>
+<p>如果一个参数是以非const引用传入，c<ins>编译器就有理由认为程序员会在函数中修改这个值，并且这个被修改的引用在函数返回后要发挥作用。但如果你把一个临时变量当作非const引用参数传进来，由于临时变量的特殊性，程序员并不能操作临时变量，而且临时变量随时可能被释放掉，所以，一般说来，修改一个临时变量是毫无意义的，据此，c</ins>编译器加入了临时变量不能作为非const引用的这个语义限制。</p>
+<h5 id="2-c产生非常量引用的初始值必须是值"><a class="markdownIt-Anchor" href="#2-c产生非常量引用的初始值必须是值"></a> 2. c++产生非常量引用的初始值必须是值</h5>
+<p>出现这种情况是因为调用函数的形参类型是 T&amp;(T为某一类型),该类型与调用参数值传入不一致,比如函数，中形参是int型,而传入实参是double,存在隐式类型转化,系统会自动产生临时变量temp将常量进行了修改。</p>
 
       
     </div>
@@ -405,7 +415,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/" title="rgb学习笔记" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/26/studynotes/RGB/</a>
+      <a href="http://qiujunlin.github.com/2020/09/20/c++/bug/bug/" title="C++ bug" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/20/c++/bug/bug/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -452,12 +462,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" title="处理轨迹坐标，计算经纬度两点距离，去飘点"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2020/09/20/c++/c++Primer/note/" title="C++ primer读书笔记"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2020/09/21/studynotes/Learningroute/" title="Learning route"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="python 基础知识"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

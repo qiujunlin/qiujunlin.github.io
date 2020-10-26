@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qiujunlin.github.com/2020/10/26/Java/baseknow/linkedlist/</loc>
+    
+    <lastmod>2020-10-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2020-10-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/2020/09/20/c++/bug/bug/</loc>
+    
+    <lastmod>2020-10-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://qiujunlin.github.com/2020/09/07/python/bug/ValueError%20too%20many%20values%20to%20unpack%20(expected%202)/</loc>
     
     <lastmod>2020-09-30</lastmod>
@@ -37,13 +65,6 @@
   </url>
   
   <url>
-    <loc>http://qiujunlin.github.com/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    
-    <lastmod>2020-09-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://qiujunlin.github.com/2020/09/26/studynotes/RGB/</loc>
     
     <lastmod>2020-09-26</lastmod>
@@ -54,13 +75,6 @@
     <loc>http://qiujunlin.github.com/2020/09/20/c++/c++Primer/note/</loc>
     
     <lastmod>2020-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://qiujunlin.github.com/2020/09/13/paper/R-CNN/</loc>
-    
-    <lastmod>2020-09-18</lastmod>
     
   </url>
   
@@ -137,7 +151,7 @@
 
   <url>
     <loc>http://qiujunlin.github.com/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -145,56 +159,70 @@
   
   <url>
     <loc>http://qiujunlin.github.com/tags/bug/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/R-CNN/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/thems/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/AlexNet/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/C/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/study/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/tags/algorithm/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/C-bug/</loc>
+    <lastmod>2020-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/tags/linkedlist/</loc>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -203,42 +231,56 @@
   
   <url>
     <loc>http://qiujunlin.github.com/categories/bug/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/thems/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/studynote/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qiujunlin.github.com/categories/algorithm/</loc>
-    <lastmod>2020-09-30</lastmod>
+    <lastmod>2020-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/categories/C-bug/</loc>
+    <lastmod>2020-10-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiujunlin.github.com/categories/JavaSe/</loc>
+    <lastmod>2020-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
