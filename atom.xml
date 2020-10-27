@@ -58,6 +58,32 @@
   </entry>
   
   <entry>
+    <title>654.最大二叉树</title>
+    <link href="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2020-09-29T12:18:31.000Z</published>
+    <updated>2020-10-27T08:53:17.577Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="解题思路"><a class="markdownIt-Anchor" href="#解题思路"></a> <strong>### 解题思路</strong></h5><p>这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。</p><p>使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标，</p><p>比如[3,2,1,6,0,5] lef=0，right=5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了：</p><p>[3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和right分别是4,5</p><p>然后递归构造这两个数组，结果分别是root的左子树和柚子树。</p><h5 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> <strong>#####递归</strong></h5><p><strong>1.</strong> 递归结束条件 :left&gt;right 这时候返回空，表示没有节点，left==right，表示子树种只剩下一个节点，直接构造返回</p><p><strong>2.</strong> 递归过程：求最大值，返回下标，对左子树和柚子树进行递归</p><p><strong>3.</strong> 返回值：返回节点</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public TreeNode constructMaximumBinaryTree(int[] nums) &#123;</span><br><span class="line">        return construct(0,nums.length-1,nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    TreeNode construct(int left,int right,int nums[])&#123;</span><br><span class="line">        if(left&gt;right) return null;</span><br><span class="line">        if(left&#x3D;&#x3D;right) return new TreeNode(nums[left]);</span><br><span class="line">        int maxindex&#x3D;left;</span><br><span class="line">        int max&#x3D;nums[left];</span><br><span class="line">        for(int i&#x3D;left;i&lt;&#x3D;right;i++)&#123;</span><br><span class="line">            if(nums[i]&gt;max)&#123;</span><br><span class="line">                max&#x3D;nums[i];</span><br><span class="line">                maxindex&#x3D;i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode node &#x3D; new TreeNode(nums[maxindex]);</span><br><span class="line">        node.left&#x3D;construct(left,maxindex-1,nums);</span><br><span class="line">        node.right&#x3D;construct(maxindex+1,right,nums);</span><br><span class="line">        return node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;解题思路&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#解题思路&quot;&gt;&lt;/a&gt; &lt;strong&gt;### 解题思路&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。&lt;/p&gt;
+&lt;p&gt;使用le</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://qiujunlin.github.com/categories/leetcode/"/>
+    
+    
+    <category term="二叉树" scheme="http://qiujunlin.github.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>处理轨迹坐标，计算经纬度两点距离，去飘点</title>
     <link href="http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/"/>
     <id>http://qiujunlin.github.com/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/</id>

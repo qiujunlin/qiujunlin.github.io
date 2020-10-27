@@ -17,20 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>rgb学习笔记 | Hexo</title>
-  <meta name="description" content="红色（Red）、绿色（Green）、蓝色（Blue）被称为光的三原色。 每一种颜色有256份，用一个字节来表示 8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。 每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好">
+  <title>654.最大二叉树 | Hexo</title>
+  <meta name="description" content="### 解题思路 这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。 使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标， 比如[3,2,1,6,0,5] lef&#x3D;0，right&#x3D;5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了： [3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rgb学习笔记">
-<meta property="og:url" content="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/index.html">
+<meta property="og:title" content="654.最大二叉树">
+<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="xiaoqiu">
-<meta property="og:description" content="红色（Red）、绿色（Green）、蓝色（Blue）被称为光的三原色。 每一种颜色有256份，用一个字节来表示 8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。 每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好">
+<meta property="og:description" content="### 解题思路 这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。 使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标， 比如[3,2,1,6,0,5] lef&#x3D;0，right&#x3D;5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了： [3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-26T02:17:43.000Z">
-<meta property="article:modified_time" content="2020-09-26T02:20:16.553Z">
+<meta property="article:published_time" content="2020-09-29T12:18:31.000Z">
+<meta property="article:modified_time" content="2020-10-27T08:53:17.577Z">
 <meta property="article:author" content="qiujunlin">
+<meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/index.html">
+  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
   
@@ -347,14 +348,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-studynotes/RGB" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-algorithm/654. 最大二叉树" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      rgb学习笔记
+      654.最大二叉树
     </h1>
   
 
@@ -362,12 +363,22 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/09/26/studynotes/RGB/" class="article-date">
-	  <time datetime="2020-09-26T02:17:43.000Z" itemprop="datePublished">2020-09-26</time>
+	<a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+	  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -378,10 +389,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/26/studynotes/RGB/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 219(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 338(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -391,11 +402,17 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>红色（<strong>R</strong>ed）、绿色（<strong>G</strong>reen）、蓝色（<strong>B</strong>lue）被称为<strong>光的三原色</strong>。</p>
-<p>每一种颜色有256份，用一个字节来表示</p>
-<p>8比特（bit）的信息量可以表现出2的8次方共256种选择。换句话说，1个字节可以存储256种状态。这就是8位RGB色彩模式里把RGB均分为256等份的原因。</p>
-<p>每个像素只有一种颜色，但是这一种颜色却是由RGB三原色按照各自的分量值混合而成的，每个像素里的R、G、B各自有256种可能，正好是1个字节；因此每个像素要占用3个字节。而每个像素可能显示的颜色总数是256×256×256=1677216种。</p>
-<p>一张300像素×200像素宽高的RGB照片，它有60000个像素点，就应该占用60000×3=180000个字节(B)，180000÷1024≈175.8K的空间</p>
+        <h5 id="解题思路"><a class="markdownIt-Anchor" href="#解题思路"></a> <strong>### 解题思路</strong></h5>
+<p>这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。</p>
+<p>使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标，</p>
+<p>比如[3,2,1,6,0,5] lef=0，right=5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了：</p>
+<p>[3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和right分别是4,5</p>
+<p>然后递归构造这两个数组，结果分别是root的左子树和柚子树。</p>
+<h5 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> <strong>#####递归</strong></h5>
+<p><strong>1.</strong> 递归结束条件 :left&gt;right 这时候返回空，表示没有节点，left==right，表示子树种只剩下一个节点，直接构造返回</p>
+<p><strong>2.</strong> 递归过程：求最大值，返回下标，对左子树和柚子树进行递归</p>
+<p><strong>3.</strong> 返回值：返回节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public TreeNode constructMaximumBinaryTree(int[] nums) &#123;</span><br><span class="line">        return construct(0,nums.length-1,nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    TreeNode construct(int left,int right,int nums[])&#123;</span><br><span class="line">        if(left&gt;right) return null;</span><br><span class="line">        if(left&#x3D;&#x3D;right) return new TreeNode(nums[left]);</span><br><span class="line">        int maxindex&#x3D;left;</span><br><span class="line">        int max&#x3D;nums[left];</span><br><span class="line">        for(int i&#x3D;left;i&lt;&#x3D;right;i++)&#123;</span><br><span class="line">            if(nums[i]&gt;max)&#123;</span><br><span class="line">                max&#x3D;nums[i];</span><br><span class="line">                maxindex&#x3D;i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode node &#x3D; new TreeNode(nums[maxindex]);</span><br><span class="line">        node.left&#x3D;construct(left,maxindex-1,nums);</span><br><span class="line">        node.right&#x3D;construct(maxindex+1,right,nums);</span><br><span class="line">        return node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -405,7 +422,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://qiujunlin.github.com/2020/09/26/studynotes/RGB/" title="rgb学习笔记" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/26/studynotes/RGB/</a>
+      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="654.最大二叉树" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -452,12 +469,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" title="处理轨迹坐标，计算经纬度两点距离，去飘点"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2020/09/29/algorithm/145/" title="二叉树的遍历，递归和迭代方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2020/09/21/studynotes/Learningroute/" title="Learning route"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" title="处理轨迹坐标，计算经纬度两点距离，去飘点"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
