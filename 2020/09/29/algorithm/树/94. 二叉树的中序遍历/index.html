@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2020 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xiaoqiu">
-<meta property="og:url" content="http://qiujunlin.github.com/archives/2020/index.html">
+  <title>94 二叉树的后序遍历 | Hexo</title>
+  <meta name="description" content="解题思路 解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。 解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解 解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="94 二叉树的后序遍历">
+<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/index.html">
 <meta property="og:site_name" content="xiaoqiu">
+<meta property="og:description" content="解题思路 解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。 解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解 解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-29T12:18:31.000Z">
+<meta property="article:modified_time" content="2020-10-27T11:17:34.600Z">
 <meta property="article:author" content="qiujunlin">
+<meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://qiujunlin.github.com/archives/2020/index.html">
+  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
   
@@ -342,164 +347,194 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2020</h1>
-	      <p class="text-muted">共 10 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-algorithm/树/94. 二叉树的中序遍历" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      94 二叉树的后序遍历
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2020" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2020
-            </a>
-            <!-- <a href="/archives/2020" class="archive-year">2020</a> -->
-          </h3>
-        </div>
-        <div id="collapse2020" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2020">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2020/10/26/Java/baseknow/linkedlist/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-10-26T07:35:56.000Z" itemprop="datePublished">2020-10-26</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> LinkedList中add和offer的区别
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" class="article-date">
+	  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a>
+  </span>
 
 
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 348(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="解题思路"><a class="markdownIt-Anchor" href="#解题思路"></a> 解题思路</h2>
+<p>解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。</p>
+<p>解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解</p>
+<p>解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的顺序。</p>
+<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Tree;</span><br><span class="line"><span class="keyword">import</span>  java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryTreeInorderTraversal94</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="comment">//使用递归</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorderTraversal1</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        inorderTraversal1(root.left);</span><br><span class="line">        inorderTraversal1(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal2</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span>(root!=<span class="keyword">null</span>||!stack.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                stack.push(root);</span><br><span class="line">                root=root.left;</span><br><span class="line">            &#125;</span><br><span class="line">            TreeNode node= stack.pop();</span><br><span class="line">            list.add(node.val);</span><br><span class="line">            root=node.right;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//使用迭代 万能</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal3</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>  list;</span><br><span class="line">            Stack&lt;TreeNode&gt; queue = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">            queue.push(root);</span><br><span class="line">            <span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">                TreeNode node = queue.pop();</span><br><span class="line">                <span class="keyword">if</span>(node!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) queue.push(node.right);</span><br><span class="line">                    queue.push(node);</span><br><span class="line">                    queue.push(<span class="keyword">null</span>);</span><br><span class="line">                    <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) queue.push(node.left);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    list.add(queue.pop().val);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span>  list;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" title="94 二叉树的后序遍历" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/qiujunlin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/qiujunlin" target="_blank"><span class="text-dark">qiujunlin</span><small class="ml-1x">C/C++/Python/Java programer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
-    
-    
-<a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 654.最大二叉树
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 94 二叉树的后序遍历
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 144 二叉树的前序比遍历
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-29T10:42:18.000Z" itemprop="datePublished">2020-09-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 处理轨迹坐标，计算经纬度两点距离，去飘点
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/26/studynotes/RGB/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-26T02:17:43.000Z" itemprop="datePublished">2020-09-26</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> rgb学习笔记
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/21/studynotes/Learningroute/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-21T07:22:07.000Z" itemprop="datePublished">2020-09-21</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Learning route
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/20/c++/c++Primer/note/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-20T01:38:37.000Z" itemprop="datePublished">2020-09-20</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> C++ primer读书笔记
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/20/c++/bug/bug/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-20T01:38:37.000Z" itemprop="datePublished">2020-09-20</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> C++ bug
-</a>
-
-
-  
-    
-    
-    
-<a href="/2020/09/16/python/know/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-09-16T09:23:44.000Z" itemprop="datePublished">2020-09-16</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> python 基础知识
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
+  <section id="comments">
   	
+      <div id="vcomments"></div>
     
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev disabled">
-                <a href="javascript:;">
-                    <i class="icon icon-angle-left"></i>
-                    上一页
-                </a>
-            </li>
-            
-            
-            <li class="next">
-                <a href="/archives/2020/page/2/">
-                    下一页
-                    <i class="icon icon-angle-right"></i>
-                </a>
-            </li>
-            
-        </ul>
-        <div class="total-article bar-right">Page 1 of 2</div>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="654.最大二叉树"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" title="144 二叉树的前序比遍历"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    
- 	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -560,6 +595,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'srMpOJp2tacUklpXrI2SdHrB-gzGzoHsz',
+    appKey: 'OsxEOzRQTwsPoyepBzotCirS',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 

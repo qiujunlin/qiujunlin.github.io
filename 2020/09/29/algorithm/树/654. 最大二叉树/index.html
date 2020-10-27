@@ -21,17 +21,17 @@
   <meta name="description" content="### 解题思路 这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。 使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标， 比如[3,2,1,6,0,5] lef&#x3D;0，right&#x3D;5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了： [3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="654.最大二叉树">
-<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
+<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="xiaoqiu">
 <meta property="og:description" content="### 解题思路 这道题的代码风格和通过二叉树的前序和中序遍历还原二叉树的办法类似。 使用left和right两个指针来表示一个需要被构造的数组的最左边和最右边的下标， 比如[3,2,1,6,0,5] lef&#x3D;0，right&#x3D;5，找到最大值下标3，构造节点root，这是需要被构造的数组就变成了： [3,2,1]和[0,5]，[3,2,1]的left和right分别是0,2,[0,5]的left和">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T12:18:31.000Z">
-<meta property="article:modified_time" content="2020-10-27T08:53:17.577Z">
+<meta property="article:modified_time" content="2020-10-27T13:53:56.402Z">
 <meta property="article:author" content="qiujunlin">
 <meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
+  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
   
@@ -219,7 +219,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-bug/">C++bug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSe/">JavaSe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/studynote/">studynote</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-bug/">C++bug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSe/">JavaSe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/studynote/">studynote</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -229,7 +229,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlexNet/" rel="tag">AlexNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-bug/" rel="tag">C++bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linkedlist/" rel="tag">linkedlist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/" rel="tag">study</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlexNet/" rel="tag">AlexNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-bug/" rel="tag">C++bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linkedlist/" rel="tag">linkedlist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/" rel="tag">study</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -239,7 +239,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/AlexNet/" style="font-size: 13px;">AlexNet</a> <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/C-bug/" style="font-size: 13px;">C++bug</a> <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/algorithm/" style="font-size: 13px;">algorithm</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/linkedlist/" style="font-size: 13px;">linkedlist</a> <a href="/tags/study/" style="font-size: 13px;">study</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13px;">二叉树</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
+      <a href="/tags/AlexNet/" style="font-size: 13px;">AlexNet</a> <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/C-bug/" style="font-size: 13px;">C++bug</a> <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/linkedlist/" style="font-size: 13px;">linkedlist</a> <a href="/tags/study/" style="font-size: 13px;">study</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13.5px;">二叉树</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
     </div>
   </div>
 
@@ -248,7 +248,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -279,10 +279,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/algorithm/">algorithm</a>
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
               </p>
               <p class="item-title">
-                <a href="/2020/09/29/algorithm/145/" class="title">二叉树的遍历，递归和迭代方法</a>
+                <a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="title">654.最大二叉树</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
@@ -297,7 +297,22 @@
                 <a class="category-link" href="/categories/leetcode/">leetcode</a>
               </p>
               <p class="item-title">
-                <a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="title">654.最大二叉树</a>
+                <a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" class="title">94 二叉树的后序遍历</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="title">144 二叉树的前序比遍历</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
@@ -320,21 +335,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2020/09/26/studynotes/RGB/" class="title">rgb学习笔记</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-09-26T02:17:43.000Z" itemprop="datePublished">2020-09-26</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -348,7 +348,7 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-algorithm/654. 最大二叉树" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-algorithm/树/654. 最大二叉树" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
@@ -363,7 +363,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+	<a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
 	  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
 	</a>
 </span>
@@ -389,10 +389,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 338(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 327(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -412,7 +412,7 @@
 <p><strong>1.</strong> 递归结束条件 :left&gt;right 这时候返回空，表示没有节点，left==right，表示子树种只剩下一个节点，直接构造返回</p>
 <p><strong>2.</strong> 递归过程：求最大值，返回下标，对左子树和柚子树进行递归</p>
 <p><strong>3.</strong> 返回值：返回节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public TreeNode constructMaximumBinaryTree(int[] nums) &#123;</span><br><span class="line">        return construct(0,nums.length-1,nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    TreeNode construct(int left,int right,int nums[])&#123;</span><br><span class="line">        if(left&gt;right) return null;</span><br><span class="line">        if(left&#x3D;&#x3D;right) return new TreeNode(nums[left]);</span><br><span class="line">        int maxindex&#x3D;left;</span><br><span class="line">        int max&#x3D;nums[left];</span><br><span class="line">        for(int i&#x3D;left;i&lt;&#x3D;right;i++)&#123;</span><br><span class="line">            if(nums[i]&gt;max)&#123;</span><br><span class="line">                max&#x3D;nums[i];</span><br><span class="line">                maxindex&#x3D;i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode node &#x3D; new TreeNode(nums[maxindex]);</span><br><span class="line">        node.left&#x3D;construct(left,maxindex-1,nums);</span><br><span class="line">        node.right&#x3D;construct(maxindex+1,right,nums);</span><br><span class="line">        return node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">constructMaximumBinaryTree</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> construct(<span class="number">0</span>,nums.length-<span class="number">1</span>,nums);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">TreeNode <span class="title">construct</span><span class="params">(<span class="keyword">int</span> left,<span class="keyword">int</span> right,<span class="keyword">int</span> nums[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left&gt;right) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span>(left==right) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(nums[left]);</span><br><span class="line">        <span class="keyword">int</span> maxindex=left;</span><br><span class="line">        <span class="keyword">int</span> max=nums[left];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=left;i&lt;=right;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;max)&#123;</span><br><span class="line">                max=nums[i];</span><br><span class="line">                maxindex=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode node = <span class="keyword">new</span> TreeNode(nums[maxindex]);</span><br><span class="line">        node.left=construct(left,maxindex-<span class="number">1</span>,nums);</span><br><span class="line">        node.right=construct(maxindex+<span class="number">1</span>,right,nums);</span><br><span class="line">        <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -422,7 +422,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="654.最大二叉树" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
+      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="654.最大二叉树" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -469,12 +469,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/09/29/algorithm/145/" title="二叉树的遍历，递归和迭代方法"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2020/10/26/Java/baseknow/linkedlist/" title="LinkedList中add和offer的区别"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" title="处理轨迹坐标，计算经纬度两点距离，去飘点"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" title="94 二叉树的后序遍历"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

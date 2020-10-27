@@ -17,19 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>二叉树的遍历，递归和迭代方法 | Hexo</title>
-  <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树的遍历，递归和迭代方法">
-<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/145/index.html">
+  <title>144 二叉树的前序比遍历 | Hexo</title>
+  <meta name="description" content="解题思路 解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。 解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解 解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="144 二叉树的前序比遍历">
+<meta property="og:url" content="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/index.html">
 <meta property="og:site_name" content="xiaoqiu">
+<meta property="og:description" content="解题思路 解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。 解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解 解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T12:18:31.000Z">
-<meta property="article:modified_time" content="2020-09-29T12:19:20.001Z">
+<meta property="article:modified_time" content="2020-10-27T09:44:39.839Z">
 <meta property="article:author" content="qiujunlin">
-<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/145/index.html">
+  <link rel="canonical" href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaoqiu" type="application/atom+xml">
   
@@ -217,7 +219,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-bug/">C++bug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSe/">JavaSe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/studynote/">studynote</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-bug/">C++bug</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C++基础知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSe/">JavaSe</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug/">bug</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/studynote/">studynote</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/thems/">thems</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -227,7 +229,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlexNet/" rel="tag">AlexNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-bug/" rel="tag">C++bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linkedlist/" rel="tag">linkedlist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/" rel="tag">study</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AlexNet/" rel="tag">AlexNet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-bug/" rel="tag">C++bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R-CNN/" rel="tag">R-CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/" rel="tag">bug</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linkedlist/" rel="tag">linkedlist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/study/" rel="tag">study</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thems/" rel="tag">thems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -237,7 +239,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/AlexNet/" style="font-size: 13px;">AlexNet</a> <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/C-bug/" style="font-size: 13px;">C++bug</a> <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/algorithm/" style="font-size: 13px;">algorithm</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/linkedlist/" style="font-size: 13px;">linkedlist</a> <a href="/tags/study/" style="font-size: 13px;">study</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13px;">二叉树</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
+      <a href="/tags/AlexNet/" style="font-size: 13px;">AlexNet</a> <a href="/tags/C/" style="font-size: 13px;">C++</a> <a href="/tags/C-bug/" style="font-size: 13px;">C++bug</a> <a href="/tags/R-CNN/" style="font-size: 13px;">R-CNN</a> <a href="/tags/bug/" style="font-size: 14px;">bug</a> <a href="/tags/linkedlist/" style="font-size: 13px;">linkedlist</a> <a href="/tags/study/" style="font-size: 13px;">study</a> <a href="/tags/thems/" style="font-size: 13px;">thems</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 13.5px;">二叉树</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a>
     </div>
   </div>
 
@@ -246,7 +248,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -277,10 +279,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/algorithm/">algorithm</a>
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
               </p>
               <p class="item-title">
-                <a href="/2020/09/29/algorithm/145/" class="title">二叉树的遍历，递归和迭代方法</a>
+                <a href="/2020/09/29/algorithm/%E6%A0%91/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="title">654.最大二叉树</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
@@ -295,7 +297,22 @@
                 <a class="category-link" href="/categories/leetcode/">leetcode</a>
               </p>
               <p class="item-title">
-                <a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" class="title">654.最大二叉树</a>
+                <a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" class="title">94 二叉树的后序遍历</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="title">144 二叉树的前序比遍历</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
@@ -318,21 +335,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2020/09/26/studynotes/RGB/" class="title">rgb学习笔记</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-09-26T02:17:43.000Z" itemprop="datePublished">2020-09-26</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -346,14 +348,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-algorithm/145" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-algorithm/树/144 二叉树的前序遍历" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      二叉树的遍历，递归和迭代方法
+      144 二叉树的前序比遍历
     </h1>
   
 
@@ -361,20 +363,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/09/29/algorithm/145/" class="article-date">
+	<a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="article-date">
 	  <time datetime="2020-09-29T12:18:31.000Z" itemprop="datePublished">2020-09-29</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/algorithm/" rel="tag">algorithm</a>
+	<a class="article-tag-link-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a>
   </span>
 
 
@@ -387,10 +389,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/145/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 394(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -400,7 +402,13 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <h2 id="解题思路"><a class="markdownIt-Anchor" href="#解题思路"></a> 解题思路</h2>
+<p>解法1 使用递归 也是最常用的方式，但是递归在某一些场景会出错，也是比如某个树 的深度很大，极端情况，全部都在左子树或者柚子树，开会造成栈的溢出。</p>
+<p>解法2. 使用迭代，递归的本质就是使用了栈，我们直接定义一个栈，然后进行遍历，很容易理解</p>
+<p>解法3 参考大神 ，跟解法2 类似，使用一个null值来标志中节点，是一种万能写法，二叉树的前序遍历后序遍历中序遍历都可以使用这种，只需要改几行代码的顺序。</p>
+<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Tree;</span><br><span class="line"><span class="keyword">import</span>  java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryTreePreorderTraversal144</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    List&lt;Integer&gt; list= <span class="keyword">new</span> ArrayList&lt;&gt;();<span class="comment">//返回值</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法一  递归</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">          <span class="keyword">return</span>  list;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        preorderTraversal(root.left);</span><br><span class="line">        preorderTraversal(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//方法2  迭代</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal2</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>  list;</span><br><span class="line">        Stack&lt;TreeNode&gt; queue = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        queue.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">int</span> num = queue.size();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;num;i++)&#123;</span><br><span class="line">                TreeNode node= queue.pop();</span><br><span class="line">                list.add(node.val);</span><br><span class="line">                <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) queue.push(node.right);</span><br><span class="line">                <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) queue.push(node.left);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  list;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//方法3 通用</span></span><br><span class="line">    <span class="comment">//方法2  迭代</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal3</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>  list;</span><br><span class="line">        Stack&lt;TreeNode&gt; queue = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        queue.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">            TreeNode node = queue.pop();</span><br><span class="line">            <span class="keyword">if</span>(node!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) queue.push(node.right);</span><br><span class="line">                <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) queue.push(node.left);</span><br><span class="line">                queue.push(node);</span><br><span class="line">                queue.push(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                list.add(queue.pop().val);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <div class="article-footer">
@@ -409,7 +417,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/145/" title="二叉树的遍历，递归和迭代方法" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/145/</a>
+      <a href="http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" title="144 二叉树的前序比遍历" target="_blank" rel="external">http://qiujunlin.github.com/2020/09/29/algorithm/%E6%A0%91/144%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -456,12 +464,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/10/26/Java/baseknow/linkedlist/" title="LinkedList中add和offer的区别"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2020/09/29/algorithm/%E6%A0%91/94.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" title="94 二叉树的后序遍历"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2020/09/29/algorithm/654.%20%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" title="654.最大二叉树"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/09/29/studynotes/%E5%A4%84%E7%90%86%E8%BD%A8%E8%BF%B9%E5%9D%90%E6%A0%87/" title="处理轨迹坐标，计算经纬度两点距离，去飘点"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
